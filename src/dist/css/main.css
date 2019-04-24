@@ -2746,7 +2746,7 @@ p > i + [class*="rt-icon"] {
 	top: 50%;
 	margin-left: -40px;
 	margin-top: -40px;
-	background: url("../img/owl.video.play.png") no-repeat;
+	background: url("/img/owl.video.play.png") no-repeat;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
@@ -3491,7 +3491,7 @@ a.pp_arrow_next.disabled {
 }
 
 .pp_gallery li.default a {
-	background: url(../img/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
+	background: url(/img/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;
 	display: block;
 	height: 33px;
 	width: 50px;
@@ -4812,7 +4812,7 @@ div.ppt {
 
 .bg_image,
 .bg_image:after {
-	background-image: url(../img/background_section.png);
+	background-image: url(/img/background_section.png);
 }
 
 /* Hero text in sections */
@@ -4902,13 +4902,13 @@ h2.section_header + hr {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	background: url(../img/preloader.gif) no-repeat 50% 50% transparent;
+	background: url(/img/preloader.gif) no-repeat 50% 50% transparent;
 	margin: -50px 0 0 -50px;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.preloader_image {
-		background: url(../img/preloader.gif) no-repeat 50% 50% transparent;
+		background: url(/img/preloader.gif) no-repeat 50% 50% transparent;
 	}
 }
 
@@ -4950,47 +4950,47 @@ body.boxed {
 }
 
 .pattern1 {
-	background-image: url(../img/pattern1.png);
+	background-image: url(/img/pattern1.png);
 }
 
 .pattern2 {
-	background-image: url(../img/pattern2.png);
+	background-image: url(/img/pattern2.png);
 }
 
 .pattern3 {
-	background-image: url(../img/pattern3.png);
+	background-image: url(/img/pattern3.png);
 }
 
 .pattern4 {
-	background-image: url(../img/pattern4.png);
+	background-image: url(/img/pattern4.png);
 }
 
 .pattern5 {
-	background-image: url(../img/pattern5.png);
+	background-image: url(/img/pattern5.png);
 }
 
 .pattern6 {
-	background-image: url(../img/pattern6.png);
+	background-image: url(/img/pattern6.png);
 }
 
 .pattern7 {
-	background-image: url(../img/pattern7.png);
+	background-image: url(/img/pattern7.png);
 }
 
 .pattern8 {
-	background-image: url(../img/pattern8.png);
+	background-image: url(/img/pattern8.png);
 }
 
 .pattern9 {
-	background-image: url(../img/pattern9.png);
+	background-image: url(/img/pattern9.png);
 }
 
 .pattern10 {
-	background-image: url(../img/pattern10.png);
+	background-image: url(/img/pattern10.png);
 }
 
 .pattern11 {
-	background-image: url(../img/pattern11.png);
+	background-image: url(/img/pattern11.png);
 }
 
 .boxed .container,
@@ -9631,7 +9631,7 @@ body.active-side-header.slide-right .page_header_side {
 
 /* template parallax sections */
 .page_contact.parallax {
-	background-image: url(../img/parallax/map-dark.jpg);
+	background-image: url(/img/parallax/map-dark.jpg);
 }
 
 .page_contact.parallax:after {
@@ -9640,15 +9640,15 @@ body.active-side-header.slide-right .page_header_side {
 
 .section_subscribe.parallax,
 .page_action.parallax {
-	background-image: url(../img/parallax/progress.jpg);
+	background-image: url(/img/parallax/progress.jpg);
 }
 
 .section_404.background_cover {
-	background-image: url(../img/parallax/404.jpg);
+	background-image: url(/img/parallax/404.jpg);
 }
 
 .page_breadcrumbs.parallax {
-	background-image: url(../img/parallax/top.jpg);
+	background-image: url(/img/parallax/top.jpg);
 }
 
 .page_breadcrumbs.parallax:after {
@@ -9658,7 +9658,7 @@ body.active-side-header.slide-right .page_header_side {
 .page_footer.parallax,
 .page_copyright.parallax,
 .page_contacts.parallax {
-	background-image: url(../img/parallax/bottom.jpg);
+	background-image: url(/img/parallax/bottom.jpg);
 }
 
 /* footer styles */
@@ -13344,7 +13344,7 @@ widget_pages
 
 .contact-form.parallax {
 	padding: 50px 50px 35px;
-	background-image: url(../img/parallax/map.jpg);
+	background-image: url(/img/parallax/map.jpg);
 }
 
 .contact-form-respond {

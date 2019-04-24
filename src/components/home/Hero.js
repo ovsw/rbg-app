@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 
 const HeroSection = styled(BackgroundImage)`
-  padding-top: 20px;
+  ${tw` py-20`};
 `
 
 const Hero = () => (

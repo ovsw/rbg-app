@@ -2,8 +2,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import LogoImage from '../dist/img/logo.png'
-
 const Header = ({ siteTitle }) => (
   <>
     <section className="cs main_color2  section_padding_top_5 section_padding_bottom_5  table_section      page_topline   table_section_sm">
@@ -44,7 +42,7 @@ const Header = ({ siteTitle }) => (
             <div className="col-sm-12 display_table">
               <div className="header_left_logo display_table_cell">
                 <a href="/" className="logo top_logo">
-                  <img src={LogoImage} alt="" />
+                  <img src="/img/logo.png" alt="" />
                 </a>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
