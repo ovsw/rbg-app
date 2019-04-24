@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Features2 = () => (
-  <section id="services" className="ls section_padding_top_100 section_padding_bottom_100 section_padding_bottom_25">
+  <section id="services" className="ds section_padding_top_100 section_padding_bottom_100 section_padding_bottom_25">
     <div className="container">
       <div className="row">
         <div className="col-md-6">

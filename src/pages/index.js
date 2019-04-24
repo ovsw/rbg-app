@@ -15,7 +15,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
+    <Features />
+
     <ServicesListing
+      theme="ls"
       title="Residential"
       services={[
         {
@@ -29,6 +32,7 @@ const IndexPage = () => (
       ]}
     />
     <ServicesListing
+      theme="ds"
       title="Commercial"
       services={[
         {
@@ -49,7 +53,6 @@ const IndexPage = () => (
         { title: 'Closures', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
       ]}
     />
-    <Features />
     <Features2 />
     <About />
     {/* <h1>Hi people</h1>

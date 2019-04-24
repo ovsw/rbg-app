@@ -1,7 +1,7 @@
 import React from 'react'
 
-const ServicesListing = ({ title, services }) => (
-  <section className="ds ms section_padding_top_50 section_padding_bottom_50">
+const ServicesListing = ({ title, services, theme }) => (
+  <section className={`ms section_padding_top_50 section_padding_bottom_50 ${theme}`}>
     <div className="container">
       <div className="row">
         <div
