@@ -9,6 +9,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
+import { ThemeProvider } from 'styled-components'
+
+import RBGTheme from '../theme/defaultTheme'
+
 import Header from './Header'
 import Footer from './Footer'
 import './layout.css'
@@ -25,18 +29,20 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-          <Footer />
+      <ThemeProvider theme={RBGTheme}>
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
           <div>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <main>{children}</main>
+            <Footer />
+            <div>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </div>
           </div>
-        </div>
-      </>
+        </>
+      </ThemeProvider>
     )}
   />
 )

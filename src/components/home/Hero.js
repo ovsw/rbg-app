@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 const HeroSection = styled(BackgroundImage)`
   ${tw` py-20`};
+  border-bottom: 3px solid ${props => props.theme.accentColor};
 `
 
 const Hero = () => (

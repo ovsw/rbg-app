@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ServicesListing = ({ title, services }) => (
-  <section className="ls  section_padding_top_50 section_padding_bottom_50">
+  <section className="ds ms section_padding_top_50 section_padding_bottom_50">
     <div className="container">
       <div className="row">
         <div
