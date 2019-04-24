@@ -1,10 +1,19 @@
 // import { Link } from "gatsby"
 import PropTypes from 'prop-types'
 import React from 'react'
+import styled from 'styled-components'
+
+const HeaderWrapper = styled.div`
+  ${tw`fixed pin-x`};
+  top: 60px;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* background-color: green; */
+`
 
 const Header = ({ siteTitle }) => (
   <>
-    <section className="cs main_color2  section_padding_top_5 section_padding_bottom_5  table_section      page_topline   table_section_sm">
+    <section className="cs main_color2 section_padding_top_5 section_padding_bottom_5 table_section page_topline  able_section_sm">
       <div className="container">
         <div className="row">
           <div className="col-sm-8 text-center text-sm-left">
@@ -35,7 +44,7 @@ const Header = ({ siteTitle }) => (
       </div>
     </section>
 
-    <div className="page_header_wrapper header_darkgrey header_transparent_wrap affix-top-wrapper">
+    <HeaderWrapper className="">
       <header className="page_header header_darkgrey header_transparent tall_header toggler_xs_right columns_margin_0 affix-top">
         <div className="container-fluid">
           <div className="row">
@@ -86,7 +95,7 @@ const Header = ({ siteTitle }) => (
           </div>
         </div>
       </header>
-    </div>
+    </HeaderWrapper>
   </>
 )
 

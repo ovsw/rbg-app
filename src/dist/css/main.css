@@ -6660,7 +6660,7 @@ body.boxed {
 
 .header_darkgrey {
 	color: #ffffff;
-	background-color: #212324;
+	/* background-color: #212324; */
 }
 
 .header_darkgrey.affix {
