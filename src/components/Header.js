@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
-  ${tw`fixed pin-x`};
+  ${tw`absolute pin-x`};
   top: 60px;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.7);
@@ -45,7 +45,7 @@ const Header = ({ siteTitle }) => (
     </section>
 
     <HeaderWrapper className="">
-      <header className="page_header header_darkgrey header_transparent tall_header toggler_xs_right columns_margin_0 affix-top">
+      <header className="page_header header_darkgrey header_transparent tall_header toggler_xs_right columns_margin_0">
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-12 display_table">
