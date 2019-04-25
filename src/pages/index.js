@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -12,7 +13,7 @@ import About from '../components/home/About'
 import ServicesListing from '../components/ServicesListing'
 import News from '../components/home/News'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
@@ -56,7 +57,7 @@ const IndexPage = () => (
     />
     <Features2 />
     <About />
-    <News />
+    <News newsItems={data.allDatoCmsNewsArticle.edges} />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -68,3 +69,28 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexQuery {
+    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 3) {
+      edges {
+        node {
+          title
+          slug
+          shortDate: date(formatString: "dddd, MMM Do")
+          intro
+          coverImage {
+            url
+            alt
+            fluid(
+              maxWidth: 440
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines" }
+            ) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`

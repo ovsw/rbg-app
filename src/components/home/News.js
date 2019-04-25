@@ -1,7 +1,9 @@
 import React from 'react'
+import NewsItem from './NewsItem'
 
-const HomeNews = () => (
+const HomeNews = ({ newsItems }) => (
   <section className="ds section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30 columns_padding_25">
+    {console.log(newsItems)}
     <div className="container">
       <div className="row">
         {/* <div className="col-sm-3">
@@ -26,68 +28,9 @@ const HomeNews = () => (
           </div>
         </div> */}
         <div className="col-sm-12">
-          <div className="col-sm-1 col-lg-4">
-            <article className="post vertical-item content-padding ls ms rounded overflow_hidden">
-              <div className="item-media entry-thumbnail top_color_border">
-                <img src="images/gallery/08.jpg" alt="" />
-              </div>
-              <div className="item-content">
-                <header className="entry-header">
-                  <div className="categories-links highlightlinks">
-                    <a href="blog-right.html">April 25th</a>
-                  </div>
-                  <h4 className="entry-title">
-                    <a href="blog-single-right.html">Study 800 Number Still Popular</a>
-                  </h4>
-                </header>
-                <div className="entry-content">
-                  <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div className="col-sm-1 col-lg-4">
-            <article className="post vertical-item content-padding ls ms rounded overflow_hidden">
-              <div className="item-media entry-thumbnail top_color_border">
-                <img src="images/gallery/08.jpg" alt="" />
-              </div>
-              <div className="item-content">
-                <header className="entry-header">
-                  <div className="categories-links highlightlinks">
-                    <a href="blog-right.html">April 25th</a>
-                  </div>
-                  <h4 className="entry-title">
-                    <a href="blog-single-right.html">Study 800 Number Still Popular</a>
-                  </h4>
-                </header>
-                <div className="entry-content">
-                  <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div className="col-sm-1 col-lg-4">
-            <article className="post vertical-item content-padding ls ms rounded overflow_hidden">
-              <div className="item-media entry-thumbnail top_color_border">
-                <img src="images/gallery/08.jpg" alt="" />
-              </div>
-              <div className="item-content">
-                <header className="entry-header">
-                  <div className="categories-links highlightlinks">
-                    <a href="blog-right.html">April 25th</a>
-                  </div>
-                  <h4 className="entry-title">
-                    <a href="blog-single-right.html">Study 800 Number Still Popular</a>
-                  </h4>
-                </header>
-                <div className="entry-content">
-                  <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                </div>
-              </div>
-            </article>
-          </div>
+          {newsItems.map(({ node }) => (
+            <NewsItem node={node} key={node.slug} />
+          ))}
         </div>
       </div>
     </div>
