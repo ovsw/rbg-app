@@ -10,7 +10,7 @@ import Hero from '../components/home/Hero'
 import Features from '../components/home/Features'
 import Features2 from '../components/home/Features2'
 import About from '../components/home/About'
-import ServicesListing from '../components/ServicesListing'
+import Services from '../components/home/Services'
 import News from '../components/home/News'
 
 const IndexPage = ({ data }) => (
@@ -19,9 +19,10 @@ const IndexPage = ({ data }) => (
     <Hero />
     <Features />
 
-    <ServicesListing
+    <Services
       theme="ls"
-      title="Residential"
+      title="Services"
+      subtitle="Residential"
       services={[
         {
           title: 'Window repair',
@@ -33,9 +34,10 @@ const IndexPage = ({ data }) => (
         { title: 'Mirror Replacement', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
       ]}
     />
-    <ServicesListing
+    <Services
       theme="ds"
-      title="Commercial"
+      title="Services"
+      subtitle="Commercial"
       services={[
         {
           title: 'Storefront Metal and Glass',
