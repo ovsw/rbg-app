@@ -19,11 +19,11 @@ const Features = props => (
             </div>
           </div>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12">
-          <div className="teaser media media-xxs-block inline-block cs main_color3 with_padding big_padding margin_0">
+        <div className="lscol-lg-4 col-md-6 col-sm-12">
+          <div className="teaser media media-xxs-block inline-block ds  with_padding big_padding margin_0">
             <div className="media-left media-middle">
               <div className="teaser_icon size_big inline-block round light_bg_color thick_border_icon">
-                <i className="fa fa-user highlight3 teaser_icon" aria-hidden="true" />
+                <i className="fa fa-user highlight2 teaser_icon" aria-hidden="true" />
               </div>
             </div>
             <div className="media-body media-middle">
