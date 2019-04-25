@@ -10,6 +10,7 @@ import Features from '../components/home/Features'
 import Features2 from '../components/home/Features2'
 import About from '../components/home/About'
 import ServicesListing from '../components/ServicesListing'
+import News from '../components/home/News'
 
 const IndexPage = () => (
   <Layout>
@@ -55,6 +56,7 @@ const IndexPage = () => (
     />
     <Features2 />
     <About />
+    <News />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
