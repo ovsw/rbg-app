@@ -1,23 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import HpHeading from './home/HpHeading'
+import media from './responsive'
 
 const ServicesContainer = styled.div`
-  ${tw`flex flex-wrap`};
+  ${tw`flex flex-wrap justify-center`};
+  border-top: 1px solid #bfbfbf;
 `
 const ServiceItem = styled.div`
-  ${tw` w-1/4`};
+  ${tw`w-full p-8`};
+
+  ${media.lg`
+    ${tw`w-1/3`};
+  `};
+  border: 1px solid #bfbfbf;
+  border-top: none;
+  border-right: none;
+  &:nth-child(3),
+  &:nth-child(6) {
+    border-right: 1px solid #bfbfbf;
+  }
+  &:last-child {
+    border-right: 1px solid #bfbfbf;
+  }
 `
 
 const ServicesListing = ({ services }) => (
   <ServicesContainer className="row">
     {services.map((service, i) => (
-      <div
-        key={i}
-        className="col-lg-4 col-sm-6 col-xs-12 to_animate text-center animated fadeInUp"
-        data-animation="fadeInUp"
-      >
-        <div className="teaser text-center with_border">
+      <ServiceItem key={i} className="teaser text-center">
+        <div className="">
           <div className="teaser_icon border_icon  main_bg_color size_normal ">
             <i className="rt-icon2-lightbulb" />
           </div>
@@ -27,7 +38,7 @@ const ServicesListing = ({ services }) => (
             More
           </a>
         </div>
-      </div>
+      </ServiceItem>
     ))}
   </ServicesContainer>
 )
