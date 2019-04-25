@@ -6,6 +6,19 @@ const HomeNews = ({ newsItems }) => (
     {console.log(newsItems)}
     <div className="container">
       <div className="row">
+        <div className="col-sm-12">
+          <div
+            className="col-lg-12  col-sm-12 col-xs-12 to_animate text-center animated expandOpen"
+            data-animation="expandOpen"
+            style={{ marginBottom: '0' }}
+          >
+            <p className="small-text big highlight text-center">Raben Glass</p>
+            <h2 className="section_header text-center">Company News</h2>
+            <hr className="divider_60_2 main_bg_color" />
+          </div>
+        </div>
+      </div>
+      <div className="row">
         {/* <div className="col-sm-3">
           <span className="small-text big highlight">Our blog</span>
           <h2 className="section_header">Our Latest News</h2>
