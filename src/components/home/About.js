@@ -1,4 +1,5 @@
 import React from 'react'
+import VideoBgImage from '../../images/video-bg.jpg'
 
 const About = props => (
   <section id="about" className="ds section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30">
@@ -7,7 +8,7 @@ const About = props => (
         <div className="col-md-6 col-md-push-6">
           <div className="embed-responsive embed-responsive-3by2">
             <a href="//player.vimeo.com/video/1084537" className="embed-placeholder">
-              <img src="images/gallery/13.jpg" alt="" />
+              <img src={VideoBgImage} alt="" />
             </a>
           </div>
         </div>
