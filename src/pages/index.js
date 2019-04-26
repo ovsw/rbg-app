@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
@@ -12,6 +11,7 @@ import Features2 from '../components/home/Features2'
 import About from '../components/home/About'
 import Services from '../components/home/Services'
 import News from '../components/home/News'
+import Testimonials from '../components/home/Testimonials'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -57,8 +57,9 @@ const IndexPage = ({ data }) => (
         { title: 'Closures', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
       ]}
     />
-    <Features2 />
+    {/* <Features2 /> */}
     <About />
+    <Testimonials />
     <News newsItems={data.allDatoCmsNewsArticle.edges} />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
