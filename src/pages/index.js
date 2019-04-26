@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => (
     />
     {/* <Features2 /> */}
     <About />
-    <Testimonials />
+    <Testimonials slides={data.allDatoCmsTestimonial.edges} />
     <News newsItems={data.allDatoCmsNewsArticle.edges} />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -92,6 +92,14 @@ export const query = graphql`
               ...GatsbyDatoCmsSizes
             }
           }
+        }
+      }
+    }
+    allDatoCmsTestimonial {
+      edges {
+        node {
+          authorName
+          text
         }
       }
     }

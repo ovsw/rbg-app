@@ -4,7 +4,6 @@ import HpHeading from './HpHeading'
 
 const HomeNews = ({ newsItems }) => (
   <section className="ds section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30 columns_padding_25">
-    {console.log(newsItems)}
     <div className="container">
       <HpHeading title="Company News" subtitle="Raben Glass" />
       <div className="row">
