@@ -27,7 +27,7 @@ const ServiceItem = styled.div`
 const ServicesListing = ({ services }) => (
   <ServicesContainer className="row">
     {services.map((service, i) => (
-      <ServiceItem key={i} className="teaser text-center">
+      <ServiceItem key={service.title} className="teaser text-center">
         <div className="">
           <div className="teaser_icon border_icon  main_bg_color size_normal ">
             <i className="rt-icon2-lightbulb" />
