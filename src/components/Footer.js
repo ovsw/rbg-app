@@ -13,7 +13,7 @@ const Footer = props => (
             </p>
             <p className="topmargin_40">
               <a href="#" className="theme_button color1">
-                Buy Now!
+                Free Quote
               </a>
             </p>
           </div>

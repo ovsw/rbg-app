@@ -12,20 +12,20 @@ const About = props => (
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
-          <span className="small-text big highlight">Who is clearview?</span>
-          <h2 className="section_header">About Our Company</h2>
+          <span className="small-text big highlight">Arizona Glass</span>
+          <h2 className="section_header">About Raben Glass</h2>
           <hr className="divider_60_2 main_bg_color" />
           <p className="bold grey">
-            A specialized team of experienced technicians thriving to help clients in their needs.
+            Family owned and operated, with over 40 years of experience working in the Glass Industry.
           </p>
           <p className="">
-            Since 2001, ClearView has specialized in repairing and replacing auto glass, windshields, automotive
-            tinting, mobile services and more!
+            Here at Raben Glass we put you first while making sure we provide the best service we possibly can. We look
+            forward to working with you for all your glass needs ​ Raben Glass LLC is licensed, bonded and insured.
           </p>
-          <p className="">
-            Our full line of services is backed by decades of delivering quality workmanship and value to our customers.
-            At ClearView, we pride ourselves on providing superior products and services for every one of our customers.
-            It's what makes us the clear choice for all your glass needs.{' '}
+          <p>
+            <a href="#" className="theme_button color1">
+              Free Quote
+            </a>
           </p>
         </div>
       </div>

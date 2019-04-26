@@ -13,9 +13,11 @@ const Features = props => (
             </div>
             <div className="media-body media-middle">
               <h4 className="text-uppercase bottommargin_10">
-                <a href="#0">Shipping Worldwide</a>
+                <a href="#0">Residential</a>
               </h4>
-              <p>At vero eos accusam justo duo dolores rebum stet clita kasd gubergren.</p>
+              <p>
+                We offer repair to damaged glass and adding new glass to your home, call for free quote and estimates.
+              </p>
             </div>
           </div>
         </div>
@@ -28,9 +30,9 @@ const Features = props => (
             </div>
             <div className="media-body media-middle">
               <h4 className="text-uppercase bottommargin_10">
-                <a href="#0">Partnership Program</a>
+                <a href="#0">Commercial</a>
               </h4>
-              <p>No sea takimata sanctus est Lorem ipsum dolor sit amet lorem ipsum dolor sit amet.</p>
+              <p>Repair damaged glass and adding new glass to your home, call for free quote and estimates.</p>
             </div>
           </div>
         </div>
@@ -43,9 +45,12 @@ const Features = props => (
             </div>
             <div className="media-body media-middle">
               <h4 className="text-uppercase bottommargin_10">
-                <a href="#0">Duscounts &amp; Sale</a>
+                <a href="#0">Auto Glass</a>
               </h4>
-              <p>Consetetur sacing elited diam nonumy eirmod tempor invidunt ut labore et.</p>
+              <p>
+                Glass repair and replacement for all types of makes and models on foreign and domestic. Providing
+                service for all insurance claims.
+              </p>
             </div>
           </div>
         </div>
