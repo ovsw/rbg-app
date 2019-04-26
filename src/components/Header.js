@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
+const TopBar = styled.section`
+  color: black !important;
+`
+
 const HeaderWrapper = styled.div`
   ${tw`absolute pin-x`};
   top: 60px;
@@ -13,7 +17,7 @@ const HeaderWrapper = styled.div`
 
 const Header = ({ siteTitle }) => (
   <>
-    <section className="cs main_color2 section_padding_top_5 section_padding_bottom_5 table_section page_topline  able_section_sm">
+    <TopBar className="cs main_color2 section_padding_top_5 section_padding_bottom_5 table_section page_topline  able_section_sm">
       <div className="container">
         <div className="row">
           <div className="col-sm-8 text-center text-sm-left">
@@ -42,7 +46,7 @@ const Header = ({ siteTitle }) => (
           </div>
         </div>
       </div>
-    </section>
+    </TopBar>
 
     <HeaderWrapper className="">
       <header className="page_header header_darkgrey header_transparent tall_header toggler_xs_right columns_margin_0">
