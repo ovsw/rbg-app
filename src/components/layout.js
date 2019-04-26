@@ -9,13 +9,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import RBGTheme from '../theme/defaultTheme'
 
 import Header from './Header'
 import Footer from './Footer'
 import './layout.css'
+
+const Copyright = styled.div`
+  ${tw`p-4 text-center text-sm`};
+  & a {
+    ${tw`bold`};
+    color: #ff125d;
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -35,11 +43,14 @@ const Layout = ({ children }) => (
           <div>
             <main>{children}</main>
             <Footer />
-            <div>
-              © {new Date().getFullYear()}, Built with
+            <Copyright>
+              © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
               {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </div>
+              Website by{' '}
+              <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
+                OVS Websites
+              </a>
+            </Copyright>
           </div>
         </>
       </ThemeProvider>
