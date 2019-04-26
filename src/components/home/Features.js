@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Column = styled.div`
+  border-right: 1px solid ${props => props.theme.accentColor};
+`
+
 const Features = props => (
   <section id="features" className="ds columns_padding_0 columns_margin_0 container_padding_0">
     <div className="container-fluid">
       <div className="row flex-row">
         <div className="col-lg-4 col-md-6 col-sm-12">
-          <div className="teaser media media-xxs-block inline-block ls with_padding big_padding margin_0">
+          <Column className="teaser media media-xxs-block inline-block ds with_padding big_padding margin_0">
             <div className="media-left media-middle">
-              <div className="teaser_icon size_big inline-block round darkgrey_bg_color thick_border_icon">
+              <div className="teaser_icon size_big inline-block round light_bg_color thick_border_icon">
                 <i className="fa fa-truck highlight teaser_icon" aria-hidden="true" />
               </div>
             </div>
@@ -20,10 +24,10 @@ const Features = props => (
                 We offer repair to damaged glass and adding new glass to your home, call for free quote and estimates.
               </p>
             </div>
-          </div>
+          </Column>
         </div>
         <div className="lscol-lg-4 col-md-6 col-sm-12">
-          <div className="teaser media media-xxs-block inline-block ds  with_padding big_padding margin_0">
+          <Column className="teaser media media-xxs-block inline-block ds  with_padding big_padding margin_0">
             <div className="media-left media-middle">
               <div className="teaser_icon size_big inline-block round light_bg_color thick_border_icon">
                 <i className="fa fa-user highlight2 teaser_icon" aria-hidden="true" />
@@ -35,12 +39,12 @@ const Features = props => (
               </h4>
               <p>Repair damaged glass and adding new glass to your home, call for free quote and estimates.</p>
             </div>
-          </div>
+          </Column>
         </div>
         <div className="col-lg-4 col-md-12 col-sm-12">
-          <div className="teaser media media-xxs-block inline-block ls main_color2 with_padding big_padding margin_0">
+          <Column className="teaser media media-xxs-block inline-block ds main_color2 with_padding big_padding margin_0">
             <div className="media-left media-middle">
-              <div className="teaser_icon size_big inline-block round darkgrey_bg_color thick_border_icon">
+              <div className="teaser_icon size_big inline-block round light_bg_color thick_border_icon">
                 <i className="fa fa-tags highlight2 teaser_icon" aria-hidden="true" />
               </div>
             </div>
@@ -53,7 +57,7 @@ const Features = props => (
                 service for all insurance claims.
               </p>
             </div>
-          </div>
+          </Column>
         </div>
       </div>
     </div>

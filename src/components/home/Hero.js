@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const HeroSection = styled(BackgroundImage)`
   ${tw` py-20`};
   padding-top: 200px;
-  border-bottom: 3px solid ${props => props.theme.accentColor};
+  /* border-bottom: 3px solid ${props => props.theme.accentColor}; */
 `
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
