@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = props => (
-  <section id="about" className="ls section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30">
+  <section id="about" className="ds section_padding_top_100 section_padding_bottom_75 columns_margin_bottom_30">
     <div className="container">
       <div className="row">
         <div className="col-md-6 col-md-push-6">
