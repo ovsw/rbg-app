@@ -55,7 +55,7 @@ const Header = ({ siteTitle }) => (
             <div className="col-sm-12 display_table">
               <div className="header_left_logo display_table_cell">
                 <a href="/" className="logo top_logo">
-                  <img src="/img/logo.png" alt="" />
+                  <img src="/img/raben-glass-logo.png" alt="" />
                 </a>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
