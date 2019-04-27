@@ -7,6 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     // const basicPagetemplate = path.resolve(`./src/templates/aboutPage.js`)
+    const basicPageTemplate = path.resolve(`./src/templates/basicPage.js`)
     const newsArticletemplate = path.resolve(`./src/templates/newsArticle.js`)
 
     // Query for markdown nodes to use in creating pages.
@@ -14,6 +15,13 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           allDatoCmsNewsArticle {
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+          allDatoCmsServiceResidential {
             edges {
               node {
                 slug
@@ -40,6 +48,16 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: `news/${page.slug}`,
             component: newsArticletemplate,
+            context: {
+              slug: page.slug,
+            },
+          })
+        })
+
+        result.data.allDatoCmsServiceResidential.edges.forEach(({ node: page }) => {
+          createPage({
+            path: page.slug,
+            component: basicPageTemplate,
             context: {
               slug: page.slug,
             },

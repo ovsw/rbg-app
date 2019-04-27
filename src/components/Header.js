@@ -1,6 +1,6 @@
-// import { Link } from "gatsby"
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const TopBar = styled.section`
@@ -54,9 +54,9 @@ const Header = ({ siteTitle }) => (
           <div className="row">
             <div className="col-sm-12 display_table">
               <div className="header_left_logo display_table_cell">
-                <a href="/" className="logo top_logo">
+                <Link to="/" className="logo top_logo">
                   <img src="/img/raben-glass-logo.png" alt="" />
-                </a>
+                </Link>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
                 {/* <!-- main nav start --> */}
