@@ -7,7 +7,7 @@ const Section = styled(BackgroundImage)`
   ${tw`relative pt-32`};
   padding-top: 10rem;
   padding-bottom: 5rem;
-  background-position: 50% 2px;
+  background-attachment: fixed;
 `
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.4);

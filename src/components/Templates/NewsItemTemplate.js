@@ -1,19 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import Layout from '../layout'
 import PageHeading from '../PageHeading'
 import TextBlock from '../contentBlocks/TextBlock'
-import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
 
-const ContentWrapper = styled.article`
-  border-right: 2px solid ${props => props.theme.accentColor};
-`
-const Content = styled.div`
-  padding-top: 0 !important;
-`
-
-const BasicPageTemplate = ({ data: { title, body } }) => (
+const BlogPostTemplate = ({ data: { title, body } }) => (
   <Layout>
     <PageHeading title={title} />
 
@@ -21,17 +12,22 @@ const BasicPageTemplate = ({ data: { title, body } }) => (
       <div className="container">
         <div className="row">
           <div className="col-sm-7 col-md-8 col-lg-9">
-            <ContentWrapper className="single-post vertical-item content-padding  bottom_color_border  overflow_hidden">
-              {/* <div className="entry-thumbnail item-media">
+            <article className="single-post vertical-item content-padding with_background post bottom_color_border rounded overflow_hidden">
+              <div className="entry-thumbnail item-media">
                 <img src="images/gallery/09.jpg" alt="" />
-              </div> */}
-              <Content className="item-content">
+              </div>
+              <div className="item-content">
+                <header className="entry-header">
+                  <div className="categories-links highlightlinks">
+                    <a href="blog-right.html">Auto glass</a>
+                  </div>
+                </header>
                 <div className="entry-content">
                   {body.map(block => (
                     <div key={block.id}>
                       {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
-                      {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
                       {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
+                      {block.model.apiKey === 'image' && <ImageBlock block={block} />}
                       {block.model.apiKey === 'video' && <VideoBlock block={block} />} */}
                     </div>
                   ))}
@@ -93,8 +89,54 @@ const BasicPageTemplate = ({ data: { title, body } }) => (
                     short loin.
                   </p>
                 </div>
-              </Content>
-            </ContentWrapper>
+              </div>
+              <footer className="entry-meta small-text greylinks">
+                <div className="inline-content">
+                  <a href="blog-single-right.html">
+                    <time dateTime="2017-10-03T08:50:40+00:00"> 10.11.17</time>
+                  </a>{' '}
+                  <a href="blog-right.html"> Admin </a> <a href="blog-single-right.html">3</a>
+                </div>
+              </footer>
+            </article>
+            <article className="author-meta side-item side-md content-padding with_background rounded overflow_hidden">
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="item-media top_rounded overflow_hidden">
+                    <img src="images/post_author.jpg" alt="" />
+                  </div>
+                </div>
+                <div className="col-md-8">
+                  <div className="item-content">
+                    <h4 className="bottommargin_0">Dean Massey</h4>
+                    <p className="small-text highlight">Client</p>
+                    <p>
+                      Tail salami hamburger prosciutto shank sirloin biltong pig rump. Tail short ribs ball tip ground
+                      round meatball frankfurter sirloin pancetta shank ribeye kevin.
+                    </p>
+                    <div> </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div className="row columns_padding_5 page-nav">
+              <div className="col-md-6">
+                <div className="prev-item with_padding with_background bottom_color_border rounded overflow_hidden">
+                  <div className="highlight small-text">Previous Article</div>
+                  <h4 className="entry-title">
+                    <a href="blog-single-left.html"> Doner cow swine tail meat ball pig shank filet </a>
+                  </h4>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="next-item with_padding with_background bottom_color_border rounded overflow_hidden text-right">
+                  <div className="highlight small-text">Next Article</div>
+                  <h4 className="entry-title">
+                    <a href="blog-single-left.html"> Doner cow swine tail meat ball pig shank filet </a>
+                  </h4>
+                </div>
+              </div>
+            </div>
           </div>
 
           <Sidebar />
@@ -104,4 +146,4 @@ const BasicPageTemplate = ({ data: { title, body } }) => (
   </Layout>
 )
 
-export default BasicPageTemplate
+export default BlogPostTemplate
