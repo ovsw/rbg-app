@@ -40,6 +40,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-tailwindcss`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

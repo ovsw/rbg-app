@@ -10,6 +10,7 @@
     "gatsby": "^2.3.16",
     "gatsby-background-image": "^0.3.6",
     "gatsby-image": "^2.0.37",
+    "gatsby-plugin-layout": "^1.0.15",
     "gatsby-plugin-manifest": "^2.0.28",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-postcss": "^2.0.7",
@@ -28,6 +29,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.24.0",
+    "react-transition-group": "^4.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.0",
     "tailwindcss": "^0.7.4"

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout from '../layout'
 import PageHeading from '../PageHeading'
 import TextBlock from '../contentBlocks/TextBlock'
 import ImageBlock from '../contentBlocks/ImageBlock'
@@ -14,7 +13,7 @@ const Content = styled.div`
 `
 
 const BasicPageTemplate = ({ data: { title, body } }) => (
-  <Layout>
+  <>
     <PageHeading title={title} />
 
     <section className="ls section_padding_top_100 section_padding_bottom_100">
@@ -101,7 +100,7 @@ const BasicPageTemplate = ({ data: { title, body } }) => (
         </div>
       </div>
     </section>
-  </Layout>
+  </>
 )
 
 export default BasicPageTemplate

@@ -10,11 +10,12 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import styled, { ThemeProvider } from 'styled-components'
+import Transition from '../components/pageTransition'
 
 import RBGTheme from '../theme/defaultTheme'
 
-import Header from './Header/Header'
-import Footer from './Footer'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer'
 import './layout.css'
 
 const Copyright = styled.div`
@@ -25,7 +26,7 @@ const Copyright = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -41,7 +42,9 @@ const Layout = ({ children }) => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
           <div>
-            <main>{children}</main>
+            <main>
+              <Transition location={location}>{children}</Transition>
+            </main>
             <Footer />
             <Copyright>
               © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.

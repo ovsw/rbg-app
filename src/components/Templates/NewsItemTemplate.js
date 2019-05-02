@@ -1,11 +1,10 @@
 import React from 'react'
-import Layout from '../layout'
 import PageHeading from '../PageHeading'
 import TextBlock from '../contentBlocks/TextBlock'
 import Sidebar from '../Sidebar/Sidebar'
 
 const BlogPostTemplate = ({ data: { title, body } }) => (
-  <Layout>
+  <>
     <PageHeading title={title} />
 
     <section className="ls section_padding_top_100 section_padding_bottom_100">
@@ -143,7 +142,7 @@ const BlogPostTemplate = ({ data: { title, body } }) => (
         </div>
       </div>
     </section>
-  </Layout>
+  </>
 )
 
 export default BlogPostTemplate
