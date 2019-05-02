@@ -13,7 +13,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import RBGTheme from '../theme/defaultTheme'
 
-import Header from './Header'
+import Header from './Header/Header'
 import Footer from './Footer'
 import './layout.css'
 
