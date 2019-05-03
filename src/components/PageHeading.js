@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Section = styled(BackgroundImage)`
   ${tw`relative pt-32`};
-  padding-top: 10rem;
+  padding-top: 13rem;
   padding-bottom: 5rem;
   background-attachment: fixed;
 `
@@ -43,7 +43,6 @@ const PageHeader = ({ title }) => {
 
   return (
     <Section fluid={data.headerImage.childImageSharp.fluid} backgroundColor="#000000" className="">
-      <p>jgjfjhv</p>
       <Overlay />
       <div className="container">
         <div className="row">
