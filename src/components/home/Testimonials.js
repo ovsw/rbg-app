@@ -52,8 +52,6 @@ const Testimonials = ({ slides }) => {
     prevArrow: <PrevArrow />,
   }
 
-  console.log(slides)
-
   return (
     <section id="testimonials" className="ls section_padding_top_100 section_padding_bottom_100">
       <div className="container">
