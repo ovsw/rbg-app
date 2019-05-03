@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import styled, { ThemeProvider } from 'styled-components'
-import Transition from '../components/pageTransition'
+import PageTransition from '../components/pageTransitionPose'
 
 import RBGTheme from '../theme/defaultTheme'
 
@@ -43,7 +43,7 @@ const Layout = ({ children, location }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
           <div>
             <main>
-              <Transition location={location}>{children}</Transition>
+              <PageTransition location={location}>{children}</PageTransition>
             </main>
             <Footer />
             <Copyright>
