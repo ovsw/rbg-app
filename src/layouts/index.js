@@ -20,6 +20,7 @@ import './layout.css'
 
 const Copyright = styled.div`
   ${tw`p-4 text-center text-sm`};
+  color: #ccc;
   & a {
     ${tw`bold`};
     color: #ff125d;
