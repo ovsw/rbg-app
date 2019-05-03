@@ -35,10 +35,34 @@ const Sidebar = () => (
       <h3 className="widget-title">Social News</h3>
       <hr className="divider_60_2 main_bg_color" />
       <div>
-        <a className="social-icon border-icon rounded-icon socicon-facebook" href="/" title="Facebook" />
-        <a className="social-icon border-icon rounded-icon socicon-twitter" href="/" title="Twitter" />
-        <a className="social-icon border-icon rounded-icon socicon-youtube" href="/" title="Youtube" />
-        <a className="social-icon border-icon rounded-icon socicon-googleplus" href="/" title="Google Plus" />
+        <a
+          className="social-icon border-icon rounded-icon socicon-facebook"
+          href="https://www.facebook.com/ashur.raben.5"
+          title="Facebook"
+          rel="nooperner noreferrer"
+          target="_blank"
+        />
+        <a
+          className="social-icon border-icon rounded-icon socicon-twitter"
+          href="/"
+          title="Twitter"
+          rel="nooperner noreferrer"
+          target="_blank"
+        />
+        <a
+          className="social-icon border-icon rounded-icon socicon-youtube"
+          href="/"
+          title="Youtube"
+          rel="nooperner noreferrer"
+          target="_blank"
+        />
+        <a
+          className="social-icon border-icon rounded-icon socicon-googleplus"
+          href="/"
+          title="Google Plus"
+          rel="nooperner noreferrer"
+          target="_blank"
+        />
       </div>
     </div>
     <div className="widget widget_mailchimp">
