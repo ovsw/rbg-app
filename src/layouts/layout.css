@@ -1,3 +1,40 @@
 @import '../dist/css/bootstrap.min.css';
 @import '../dist/css/fonts.css';
 @import '../dist/css/main.css';
+
+
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 500ms ease-in-out;
+}
+/* .headroom--unpinned {
+  position: fixed;
+  transition: transform 500ms ease-in-out;
+  transform: translateY(-100%);
+} */
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+.headroom--pinned >div {
+  background-color: #212324;
+  transition: all 500ms ease-in-out;
+  transform: translateY(0%);
+}
+.headroom--unpinned >div {
+  /* position: fixed;
+  transform: translateY(-100%); */
+  background-color: #212324;
+  transition: transform 500ms ease-in-out;
+  transform: translateY(-100%);
+
+}
