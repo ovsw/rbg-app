@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 
@@ -28,36 +28,35 @@ const SubHeading = styled.p`
   }
 `
 
-const PageHeader = ({ title }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        headerImage: file(relativePath: { eq: "header-bg-1.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1925, duotone: { highlight: "#ffffff", shadow: "#051020", opacity: 50 }) {
-              ...GatsbyImageSharpFluid
-            }
+const PageHeader = ({ title }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      headerImage: file(relativePath: { eq: "header-bg-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1925, duotone: { highlight: "#ffffff", shadow: "#051020", opacity: 50 }) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
-    `}
-    render={data => (
-      <Section fluid={data.headerImage.childImageSharp.fluid} backgroundColor="#000000" className="">
-        <p>jgjfjhv</p>
-        <Overlay />
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 text-center">
-              <MainHeading>{title}</MainHeading>
-              <SubHeading>
-                <span>frame fix / adjustment, glass replacement, hardware replacement</span>
-              </SubHeading>
-            </div>
+    }
+  `)
+
+  return (
+    <Section fluid={data.headerImage.childImageSharp.fluid} backgroundColor="#000000" className="">
+      <p>jgjfjhv</p>
+      <Overlay />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12 text-center">
+            <MainHeading>{title}</MainHeading>
+            <SubHeading>
+              <span>frame fix / adjustment, glass replacement, hardware replacement</span>
+            </SubHeading>
           </div>
         </div>
-      </Section>
-    )}
-  />
-)
+      </div>
+    </Section>
+  )
+}
 
 export default PageHeader

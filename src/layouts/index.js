@@ -7,7 +7,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import styled, { ThemeProvider } from 'styled-components'
 import PageTransition from '../components/pageTransitionPose'
@@ -26,40 +26,39 @@ const Copyright = styled.div`
   }
 `
 
-const Layout = ({ children, location }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
+const Layout = ({ children, location }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
         }
       }
-    `}
-    render={data => (
-      <ThemeProvider theme={RBGTheme}>
-        <>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div>
-            <main>
-              <PageTransition location={location}>{children}</PageTransition>
-            </main>
-            <Footer />
-            <Copyright>
-              © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
-              {` `}
-              Website by{' '}
-              <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
-                OVS Websites
-              </a>
-            </Copyright>
-          </div>
-        </>
-      </ThemeProvider>
-    )}
-  />
-)
+    }
+  `)
+
+  return (
+    <ThemeProvider theme={RBGTheme}>
+      <>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div>
+          <main>
+            <PageTransition location={location}>{children}</PageTransition>
+          </main>
+          <Footer />
+          <Copyright>
+            © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
+            {` `}
+            Website by{' '}
+            <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
+              OVS Websites
+            </a>
+          </Copyright>
+        </div>
+      </>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
