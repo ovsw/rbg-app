@@ -8956,7 +8956,7 @@ body.active-side-header.slide-right .page_header_side {
 .ds .btn-accent,
 .ds .wc-proceed-to-checkout .checkout-button,
 .ds .form-submit [type="submit"] {
-	color: #ffffff;
+	color: #000000;
 	background-color: #81D613;
 }
 
@@ -8976,7 +8976,7 @@ body.active-side-header.slide-right .page_header_side {
 .ds .form-submit [type="submit"]:hover,
 .ds .form-submit [type="submit"]:focus,
 .ds .form-submit [type="submit"]:active {
-	color: #2f3233;
+	color: #ffffff;
 }
 
 .ds .theme_buttons.color2 a,
