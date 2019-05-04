@@ -7,6 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     // const basicPagetemplate = path.resolve(`./src/templates/aboutPage.js`)
+    const serviceResidentialTemplate = path.resolve(`./src/templates/serviceResidential.js`)
+    const serviceCommercialTemplate = path.resolve(`./src/templates/serviceCommercial.js`)
     const basicPageTemplate = path.resolve(`./src/templates/basicPage.js`)
     const newsArticletemplate = path.resolve(`./src/templates/newsArticle.js`)
 
@@ -22,6 +24,13 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
           allDatoCmsServiceResidential {
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+          allDatoCmsServiceCommercial {
             edges {
               node {
                 slug
@@ -56,8 +65,18 @@ exports.createPages = ({ graphql, actions }) => {
 
         result.data.allDatoCmsServiceResidential.edges.forEach(({ node: page }) => {
           createPage({
-            path: page.slug,
-            component: basicPageTemplate,
+            path: `residential/${page.slug}`,
+            component: serviceResidentialTemplate,
+            context: {
+              slug: page.slug,
+            },
+          })
+        })
+
+        result.data.allDatoCmsServiceCommercial.edges.forEach(({ node: page }) => {
+          createPage({
+            path: `commercial/${page.slug}`,
+            component: serviceCommercialTemplate,
             context: {
               slug: page.slug,
             },

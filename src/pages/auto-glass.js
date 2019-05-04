@@ -1,15 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
-const basicPageTemplate = ({ data }) => <BasicPageTemplate data={data.datoCmsBasicPage} />
+const ServiceAutoPage = ({ data }) => (
+  <>
+    <BasicPageTemplate data={data.datoCmsServicesAuto} />
+  </>
+)
 
-export default basicPageTemplate
+export default ServiceAutoPage
 
 export const query = graphql`
-  query BasicPageQuery($slug: String!) {
-    datoCmsBasicPage(slug: { eq: $slug }) {
+  query ServiceAutoQuery {
+    datoCmsServicesAuto {
       title
       body {
         ... on DatoCmsTextBlock {

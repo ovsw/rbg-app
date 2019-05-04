@@ -8,35 +8,53 @@ const MainNav = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/">Residential</a>
+        <Link to="/residential-services">Residential</Link>
         <ul>
           <li>
-            <Link to="/window-repair">Window repair</Link>
+            <Link to="/residential/single-dual-pane-window-replacement">Single/Dual Pane Window Replacement</Link>
           </li>
           <li>
-            <Link to="/">Window Glass Replacement</Link>
+            <Link to="/residential/window-glass-repair">Window Glass Repair</Link>
           </li>
           <li>
-            <Link to="/">Fully Framed Window Replacement</Link>
+            <Link to="/residential/glass-tabletops">Glass Tabletops</Link>
           </li>
           <li>
-            <Link to="/">Shower Enclosures</Link>
+            <Link to="/residential/custom-mirrors">Custom Mirrors</Link>
           </li>
           <li>
-            <Link to="/">Mirror Replacement</Link>
+            <Link to="/residential/shower-enclosures">Shower Enclosures</Link>
           </li>
         </ul>
       </li>
       <li>
-        <a href="/">Commercial</a>
+        <Link to="/commercial-services">Commercial</Link>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/commercial/storefront-metal-and-glass">Storefront Metal and Glass</Link>
+          </li>
+          <li>
+            <Link to="/commercial/window-doors-glass-replacement">Window/Doors Glass Replacement</Link>
+          </li>
+          <li>
+            <Link to="/commercial/custom-glass-tabletops">Custom Glass Tabletops</Link>
+          </li>
+          <li>
+            <Link to="/commercial/half-inch-glass-walls-and-entrances">1/2" Glass Walls &amp; Entrances</Link>
+          </li>
+          <li>
+            <Link to="/commercial/commercial-doors">Commercial Doors</Link>
+          </li>
+          <li>
+            <Link to="/commercial/multi-slide-doors-partitions">Multi-Slide Doors/Partitions</Link>
+          </li>
+          <li>
+            <Link to="/commercial/closure-hardware-replacement">Closure / Hardware Replacement</Link>
           </li>
         </ul>
       </li>
       <li>
-        <a href="/">Auto Glass</a>
+        <Link to="/auto-glass">Auto Glass</Link>
       </li>
       <li>
         <a href="/">Testimonials</a>
