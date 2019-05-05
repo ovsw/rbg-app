@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import media from './responsive'
 
 const ServicesContainer = styled.div`
@@ -7,7 +8,7 @@ const ServicesContainer = styled.div`
   border-top: 1px solid #bfbfbf;
 `
 const ServiceItem = styled.div`
-  ${tw`w-full p-8`};
+  ${tw`flex justify-center items-center w-full p-8`};
 
   ${media.lg`
     ${tw`w-1/3`};
@@ -23,17 +24,25 @@ const ServiceItem = styled.div`
     border-right: 1px solid #bfbfbf;
   }
 `
+const IconImageWrapper = styled.div`
+  display: flex !important;
+  margin: 0 auto;
+  ${tw` justify-center items-center`};
+  background-color: transparent !important;
+  border: none !important;
+`
 
 const ServicesListing = ({ services }) => (
   <ServicesContainer className="row">
-    {services.map((service, i) => (
-      <ServiceItem key={service.title} className="teaser text-center">
+    {services.map(({ node }) => (
+      <ServiceItem key={node.title} className="teaser text-center">
         <div className="">
-          <div className="teaser_icon border_icon  main_bg_color size_normal ">
-            <i className="rt-icon2-lightbulb" />
-          </div>
-          <h3>{service.title}</h3>
-          <p>{service.text}</p>
+          <IconImageWrapper className="teaser_icon border_icon  main_bg_color size_normal ">
+            {/* <i className="rt-icon2-lightbulb" /> */}
+            <Img fixed={node.iconImage.fixed} />
+          </IconImageWrapper>
+          <h3>{node.title}</h3>
+          <p>{node.tagline}</p>
           <a className="theme_button inverse" href="#">
             More
           </a>

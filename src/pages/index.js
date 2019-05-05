@@ -18,44 +18,8 @@ const IndexPage = ({ data }) => (
     <Hero />
     <Features />
 
-    <Services
-      theme="ls"
-      title="Services"
-      subtitle="Residential"
-      services={[
-        {
-          title: 'Window repair',
-          text: 'frame fix / adjustment, glass replacement, hardware replacement',
-        },
-        { title: 'Window Glass Replacement', text: 'Single (normal & safey glass) or Dual Pane (Insulated), ' },
-        { title: 'Fully Framed Window Replacement', text: 'For upgrading old windows or for damaged frames' },
-        { title: 'Shower Enclosures', text: 'Framed/Frameless,Shower Panels, Sliding doors, Custom doors' },
-        { title: 'Mirror Replacement', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
-      ]}
-    />
-    <Services
-      theme="ds"
-      title="Services"
-      subtitle="Commercial"
-      services={[
-        {
-          title: 'Storefront Metal and Glass',
-          text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym',
-        },
-        {
-          title: 'Window Glass Replacement',
-          text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym',
-        },
-        {
-          title: 'Custom Furniture Glass',
-          text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym',
-        },
-        { title: '1/2" Glass Walls', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
-        { title: 'Frameless Entrance', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
-        { title: 'Commercial Doors', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
-        { title: 'Closures', text: 'Frameless, Custom Edgework, Bathroom, Closed doors, Studio, Home Gym' },
-      ]}
-    />
+    <Services theme="ls" title="Services" subtitle="Residential" services={data.allDatoCmsServiceResidential.edges} />
+    <Services theme="ds" title="Services" subtitle="Commercial" services={data.allDatoCmsServiceCommercial.edges} />
     {/* <Features2 /> */}
     <About />
     <Testimonials slides={data.allDatoCmsTestimonial.edges} />
@@ -74,6 +38,38 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
+    allDatoCmsServiceResidential(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          title
+          position
+          slug
+          tagline
+          iconImage {
+            url
+            fixed(width: 84, imgixParams: { fm: "png", auto: "compress" }) {
+              ...GatsbyDatoCmsFixed
+            }
+          }
+        }
+      }
+    }
+    allDatoCmsServiceCommercial(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          title
+          position
+          slug
+          tagline
+          iconImage {
+            url
+            fixed(width: 84, imgixParams: { fm: "png", auto: "compress" }) {
+              ...GatsbyDatoCmsFixed
+            }
+          }
+        }
+      }
+    }
     allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 3) {
       edges {
         node {
