@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import media from './responsive'
 
@@ -32,7 +33,7 @@ const IconImageWrapper = styled.div`
   border: none !important;
 `
 
-const ServicesListing = ({ services }) => (
+const ServicesListing = ({ services, category }) => (
   <ServicesContainer className="row">
     {services.map(({ node }) => (
       <ServiceItem key={node.title} className="teaser text-center">
@@ -43,9 +44,12 @@ const ServicesListing = ({ services }) => (
           </IconImageWrapper>
           <h3>{node.title}</h3>
           <p>{node.tagline}</p>
-          <a className="theme_button inverse" href="#">
+          <Link
+            className="theme_button inverse"
+            to={category === 'Residential' ? `/residential/${node.slug}` : `/commercial/${node.slug}`}
+          >
             More
-          </a>
+          </Link>
         </div>
       </ServiceItem>
     ))}
