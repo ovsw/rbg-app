@@ -108,7 +108,7 @@ export const query = graphql`
           website
           logo {
             url
-            fixed(height: 90, imgixParams: { fm: "png", auto: "compress" }) {
+            fixed(height: 80, imgixParams: { fm: "png", auto: "compress" }) {
               ...GatsbyDatoCmsFixed
             }
           }

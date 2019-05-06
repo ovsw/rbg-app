@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 
 const SliderStyled = styled(Slider)`
-  ${tw` py-20`};
+  ${tw` py-16`};
   & .slick-list .slick-track .slick-slide {
     opacity: 0.6;
     transition: opacity 0.5s linear;
