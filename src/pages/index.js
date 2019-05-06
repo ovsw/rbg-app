@@ -11,6 +11,7 @@ import About from '../components/home/About'
 import Services from '../components/home/Services'
 import News from '../components/home/News'
 import Testimonials from '../components/home/Testimonials'
+import Partners from '../components/Partners'
 
 const IndexPage = ({ data }) => (
   <>
@@ -24,6 +25,7 @@ const IndexPage = ({ data }) => (
     <About />
     <Testimonials slides={data.allDatoCmsTestimonial.edges} />
     <News newsItems={data.allDatoCmsNewsArticle.edges} />
+    <Partners partnerData={data.allDatoCmsPartner.edges} />
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -84,7 +86,7 @@ export const query = graphql`
               maxWidth: 440
               imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines" }
             ) {
-              ...GatsbyDatoCmsSizes
+              ...GatsbyDatoCmsFluid_tracedSVG
             }
           }
         }
@@ -95,6 +97,21 @@ export const query = graphql`
         node {
           authorName
           text
+        }
+      }
+    }
+    allDatoCmsPartner(sort: { fields: [position], order: ASC }) {
+      edges {
+        node {
+          name
+          position
+          website
+          logo {
+            url
+            fixed(height: 90, imgixParams: { fm: "png", auto: "compress" }) {
+              ...GatsbyDatoCmsFixed
+            }
+          }
         }
       }
     }
