@@ -11,12 +11,9 @@ const ServicesContainer = styled.div`
 const ServiceItem = styled.div`
   ${tw`flex justify-center items-center w-full p-8`};
 
-  ${media.lg`
-    ${tw`w-1/3`};
-  `};
   border: 1px solid #bfbfbf;
   border-top: none;
-  border-right: none;
+  border-right: 1px solid #bfbfbf;
   &:nth-child(3),
   &:nth-child(6) {
     border-right: 1px solid #bfbfbf;
@@ -24,6 +21,13 @@ const ServiceItem = styled.div`
   &:last-child {
     border-right: 1px solid #bfbfbf;
   }
+
+  ${media.lg`
+    ${tw`w-1/3`};
+  `};
+  ${media.md`
+    border-right: none;
+  `}
 `
 const IconImageWrapper = styled.div`
   display: flex !important;
