@@ -25,7 +25,7 @@ const ServiceItem = styled.div`
   ${media.lg`
     ${tw`w-1/3`};
   `};
-  ${media.md`
+  ${media.lg`
     border-right: none;
   `}
 `
