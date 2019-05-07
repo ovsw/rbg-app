@@ -74,7 +74,7 @@ const Partners = ({ partnerData }) => {
       {console.log(partnerData)}
       <SliderStyled {...slideshowSettings}>
         {partnerData.map(({ node }) => (
-          <SliderItem>
+          <SliderItem key={node.name}>
             <SliderLink href={node.website} target="_blank" rel="noopener noreferrer">
               <Img fixed={node.logo.fixed} alt="" />
             </SliderLink>
