@@ -5,6 +5,9 @@ import Slider from 'react-slick'
 
 const SliderStyled = styled(Slider)`
   ${tw` py-16`};
+  & .slick-list {
+    height: 87px;
+  }
   & .slick-list .slick-track .slick-slide {
     opacity: 0.6;
     transition: opacity 0.5s linear;
@@ -15,6 +18,9 @@ const SliderStyled = styled(Slider)`
 `
 const SliderItem = styled.div`
   ${tw`px-8`};
+`
+const SliderLink = styled.div`
+  ${tw`block`};
 `
 
 const Partners = ({ partnerData }) => {
@@ -32,18 +38,46 @@ const Partners = ({ partnerData }) => {
     variableWidth: true,
     cssEase: 'linear',
     centerMode: true,
-    centerPadding: '1px',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 2000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
   }
 
   return (
-    <section id="partners" className="cs section_padding_top_40 section_padding_bottom_40">
+    <section id="partners" className="cs ">
       {console.log(partnerData)}
       <SliderStyled {...slideshowSettings}>
         {partnerData.map(({ node }) => (
           <SliderItem>
-            <a href={node.website} target="_blank" rel="noopener noreferrer">
+            <SliderLink href={node.website} target="_blank" rel="noopener noreferrer">
               <Img fixed={node.logo.fixed} alt="" />
-            </a>
+            </SliderLink>
           </SliderItem>
         ))}
       </SliderStyled>
