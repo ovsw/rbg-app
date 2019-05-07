@@ -10386,7 +10386,7 @@ body.active-side-header.slide-right .page_header_side {
 }
 
 /* Mobile menu toggler */
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
 	.toggle_menu {
 		position: absolute;
 		top: 50%;
@@ -10426,7 +10426,7 @@ body.active-side-header.slide-right .page_header_side {
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
 	.relative_toggler .toggle_menu {
 		position: relative;
 		display: block;

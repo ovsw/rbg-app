@@ -28,94 +28,116 @@ const Copyright = styled.div`
   }
 `
 
-const Layout = ({ children, location }) => {
-  const [isMenuOpen, toggleMenu] = useState(false)
+class Layout extends React.Component {
+  // const [isMenuOpen, toggleMenu] = useState(false)
+  constructor(props) {
+    super(props)
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+    this.state = {
+      isMenuOpen: false,
     }
-  `)
 
-  const mobileMenuStyles = {
-    bmCrossButton: {
-      height: '24px',
-      width: '24px',
-    },
-    bmCross: {
-      background: '#bdc3c7',
-    },
-    bmMenuWrap: {
-      position: 'fixed',
-      height: '100%',
-    },
-    bmMenu: {
-      background: '#373a47',
-      padding: '2.5em 1.5em 0',
-      fontSize: '1.15em',
-    },
-    bmMorphShape: {
-      fill: '#373a47',
-    },
-    bmItemList: {
-      color: '#b8b7ad',
-      padding: '0.8em',
-    },
-    bmItem: {
-      display: 'inline-block',
-    },
-    bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)',
-    },
+    this.toggleMenu = () => {
+      this.setState(state => {
+        console.log('from toggleMenu - is menu open?', state.isMenuOpen)
+        return {
+          isMenuOpen: !state.isMenuOpen,
+        }
+      })
+    }
+
+    // snchronize the Menu component internal state with the state of this Layout component.
+    // we update the isMenuOpen state of the Layout based on the isOpen state of the Menu component
+    // otherwise  we have to click twice on the hamburger button to open the menu
+    this.updateMenuState = menuState => {
+      console.log(menuState.isOpen)
+      this.setState(state => ({
+        isMenuOpen: menuState.isOpen,
+      }))
+    }
   }
 
-  return (
-    <ThemeProvider theme={RBGTheme}>
-      <div id="outer-container">
-        <MobileMenu
-          right
-          isOpen={isMenuOpen}
-          customBurgerIcon={false}
-          pageWrapId="page-wrap"
-          outerContainerId="outer-container"
-          styles={mobileMenuStyles}
-        >
-          <a id="home" className="menu-item" href="/">
-            Home
-          </a>
-          <a id="about" className="menu-item" href="/about">
-            About
-          </a>
-          <a id="contact" className="menu-item" href="/contact">
-            Contact
-          </a>
-        </MobileMenu>
-        <div id="page-wrap">
-          <Header siteTitle={data.site.siteMetadata.title} toggleMenu={toggleMenu} />
-          <main>
-            <PageTransition location={location}>{children}</PageTransition>
-          </main>
-          <Footer />
-          <Copyright>
-            © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
-            {` `}
-            Website by{' '}
-            <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
-              OVS Websites
+  render() {
+    const { children, location } = this.props
+    const { isMenuOpen } = this.state
+
+    const mobileMenuStyles = {
+      bmCrossButton: {
+        height: '44px',
+        width: '44px',
+      },
+      bmCross: {
+        background: '#81d612',
+      },
+      bmMenuWrap: {
+        position: 'fixed',
+        height: '100%',
+      },
+      bmMenu: {
+        background: '#373a47',
+        padding: '2.5em 1.5em 0',
+        fontSize: '1.15em',
+      },
+      bmMorphShape: {
+        fill: '#373a47',
+      },
+      bmItemList: {
+        color: '#b8b7ad',
+        padding: '0.8em',
+      },
+      bmItem: {
+        display: 'inline-block',
+      },
+      bmOverlay: {
+        background: 'rgba(0, 0, 0, 0.3)',
+      },
+    }
+
+    return (
+      <ThemeProvider theme={RBGTheme}>
+        <div id="outer-container">
+          <MobileMenu
+            right
+            isOpen={isMenuOpen}
+            onStateChange={this.updateMenuState}
+            customBurgerIcon={false}
+            pageWrapId="page-wrap"
+            outerContainerId="outer-container"
+            styles={mobileMenuStyles}
+          >
+            <a id="home" className="menu-item" href="/">
+              Home
             </a>
-          </Copyright>
+            <a id="about" className="menu-item" href="/about">
+              About
+            </a>
+            <a id="contact" className="menu-item" href="/contact">
+              Contact
+            </a>
+          </MobileMenu>
+          <div id="page-wrap">
+            <Header toggleMenu={this.toggleMenu} />
+            <main>
+              <PageTransition location={location}>{children}</PageTransition>
+            </main>
+            <Footer />
+            <Copyright>
+              © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
+              {` `}
+              Website by{' '}
+              <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
+                OVS Websites
+              </a>
+            </Copyright>
+          </div>
         </div>
-      </div>
-    </ThemeProvider>
-  )
+      </ThemeProvider>
+    )
+  }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Layout

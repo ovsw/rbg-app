@@ -13,7 +13,17 @@ const TelLink = styled.a`
   color: white;
 `
 const Hamburger = styled.span`
-  ${tw``};
+  ${tw`relative`};
+  z-index: 999;
+  color: black;
+  background-color: ${props => props.theme.accentColor};
+  span {
+    background-color: black !important;
+  }
+  span::before,
+  span::after {
+    background-color: black !important;
+  }
 `
 
 const HeaderNav = ({ toggleMenu }) => (

@@ -38,3 +38,11 @@
   transform: translateY(-100%);
 
 }
+
+/* hide desktop menu on mobile sooner */
+
+@media (max-width: 1200px) {
+  .sf-menu {
+    display: none;
+  }
+}
