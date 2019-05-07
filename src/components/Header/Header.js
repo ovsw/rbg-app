@@ -7,7 +7,7 @@ const TopBar = styled.section`
   color: black !important;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, toggleMenu }) => (
   <>
     <TopBar className="cs main_color2 section_padding_top_5 section_padding_bottom_5 table_section page_topline  able_section_sm">
       <div className="container">
@@ -40,7 +40,7 @@ const Header = ({ siteTitle }) => (
       </div>
     </TopBar>
 
-    <HeaderNav />
+    <HeaderNav toggleMenu={toggleMenu} />
   </>
 )
 

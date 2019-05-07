@@ -12,8 +12,11 @@ const HeaderWrapper = styled.div`
 const TelLink = styled.a`
   color: white;
 `
+const Hamburger = styled.span`
+  ${tw``};
+`
 
-const HeaderNav = () => (
+const HeaderNav = ({ toggleMenu }) => (
   <Headroom
     style={{
       webkitTransition: 'all .5s ease-in-out',
@@ -29,15 +32,15 @@ const HeaderNav = () => (
             <div className="col-sm-12 display_table">
               <div className="header_left_logo display_table_cell">
                 <Link to="/" className="logo top_logo">
-                  <img src="/img/raben-glass-logo.png" alt="" />
+                  <img src="/img/raben-glass-logo.png" alt="Raben Glass LLC logo" />
                 </Link>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
                 <MainNav />
                 {/* <!-- header toggler --> */}
-                <span className="toggle_menu">
+                <Hamburger onClick={toggleMenu} className="toggle_menu">
                   <span />
-                </span>
+                </Hamburger>
               </div>
               <div className="header_right_buttons display_table_cell text-right hidden-xs">
                 <h5 className="thin text-uppercase margin_0">
