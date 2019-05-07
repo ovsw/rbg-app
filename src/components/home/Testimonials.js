@@ -68,7 +68,6 @@ const Testimonials = ({ slides }) => {
                       «{node.text}»
                     </div>
                     <div className="media-right media-middle item-meta">
-                      <img src="images/faces/01.jpg" alt="" />
                       <h4 className="margin_0">{node.authorName}</h4>
                       <span className="star-rating" title="Rated 5.0 out of 5">
                         <span>
@@ -79,39 +78,6 @@ const Testimonials = ({ slides }) => {
                   </blockquote>
                 </div>
               ))}
-
-              <div className="owl-item active">
-                <blockquote className="media">
-                  <div className="media-body media-middle with_padding with_background bottom_color_border bottom_rounded">
-                    «I replace my door glass &amp; windshield, great price and services. Willing to do mobile service.»
-                  </div>
-                  <div className="media-right media-middle item-meta">
-                    <img src="images/faces/01.jpg" alt="" />
-                    <h4 className="margin_0">Lelia Hart</h4>
-                    <span className="star-rating" title="Rated 5.0 out of 5">
-                      <span>
-                        <strong className="rating">5.0</strong> out of 5
-                      </span>
-                    </span>
-                  </div>
-                </blockquote>
-              </div>
-              <div className="owl-item active">
-                <blockquote className="media">
-                  <div className="media-body media-middle with_padding with_background bottom_color_border bottom_rounded">
-                    «I replace my door glass &amp; windshield, great price and services. Willing to do mobile service.»
-                  </div>
-                  <div className="media-right media-middle item-meta">
-                    <img src="images/faces/01.jpg" alt="" />
-                    <h4 className="margin_0">Lelia Hart</h4>
-                    <span className="star-rating" title="Rated 5.0 out of 5">
-                      <span>
-                        <strong className="rating">5.0</strong> out of 5
-                      </span>
-                    </span>
-                  </div>
-                </blockquote>
-              </div>
             </SliderStyled>
           </div>
         </div>
