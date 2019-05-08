@@ -5,6 +5,93 @@ module.exports = {
     title: `Raben Glass`,
     description: `SEO description here.`,
     author: `@ovsw`,
+    siteNav: [
+      {
+        title: 'Home',
+        link: '/',
+        children: [{ title: 'empty', url: '/' }],
+      },
+      {
+        title: 'Residential',
+        link: '/residential',
+        children: [
+          {
+            title: 'Window Replacement',
+            link: '/residential/single-dual-pane-window-replacement',
+          },
+          {
+            title: 'Window Glass Repair',
+            link: '/residential/window-glass-repair',
+          },
+          {
+            title: 'Glass Tabletops',
+            link: '/residential/glass-tabletops',
+          },
+          {
+            title: 'Custom Mirrors',
+            link: '/residential/custom-mirrors',
+          },
+          {
+            title: 'Shower Enclosures',
+            link: '/residential/shower-enclosures',
+          },
+        ],
+      },
+      {
+        title: 'Commercial',
+        link: '/commercial',
+        children: [
+          {
+            title: 'Storefront Metal and Glass',
+            link: '/commercial/storefront-metal-and-glass',
+          },
+          {
+            title: 'Window/Doors Glass Replacement',
+            link: '/commercial/window-doors-glass-replacement',
+          },
+          {
+            title: 'Custom Glass Tabletops',
+            link: '/commercial/custom-glass-tabletops',
+          },
+          {
+            title: '1/2" Glass Walls & Entrances',
+            link: '/commercial/half-inch-glass-walls-and-entrances',
+          },
+          {
+            title: 'Commercial Doors',
+            link: '/commercial/commercial-doors',
+          },
+          {
+            title: 'Multi-Slide Doors / Partitions',
+            link: '/commercial/multi-slide-doors-partitions',
+          },
+          {
+            title: 'Closure / Hardware Replacement',
+            link: '/commercial/closure-hardware-replacement',
+          },
+        ],
+      },
+      {
+        title: 'Auto Glass',
+        link: '/auto',
+        children: [{ title: 'empty', url: '/' }],
+      },
+      {
+        title: 'Reviews',
+        link: '/reviews',
+        children: [{ title: 'empty', url: '/' }],
+      },
+      {
+        title: 'Blog',
+        link: '/news',
+        children: [{ title: 'empty', url: '/' }],
+      },
+      {
+        title: 'Contact',
+        link: '/contact',
+        children: [{ title: 'empty', url: '/' }],
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

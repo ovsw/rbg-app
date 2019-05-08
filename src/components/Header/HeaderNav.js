@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Headroom from 'react-headroom'
-import MainNav from './MainNav'
+import DesktopNav from './DesktopNav'
 
 const HeaderWrapper = styled.div`
   ${tw`absolute pin-x`};
@@ -46,7 +46,7 @@ const HeaderNav = ({ toggleMenu }) => (
                 </Link>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
-                <MainNav />
+                <DesktopNav />
                 {/* <!-- header toggler --> */}
                 <Hamburger onClick={toggleMenu} className="toggle_menu">
                   <span />
