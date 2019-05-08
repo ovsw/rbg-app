@@ -12,19 +12,7 @@ const HeaderWrapper = styled.div`
 const TelLink = styled.a`
   color: white;
 `
-const Hamburger = styled.span`
-  ${tw`relative`};
-  z-index: 999;
-  color: black;
-  background-color: ${props => props.theme.accentColor};
-  span {
-    background-color: black !important;
-  }
-  span::before,
-  span::after {
-    background-color: black !important;
-  }
-`
+const Hamburger = styled.span``
 
 const HeaderNav = ({ toggleMenu }) => (
   <Headroom
