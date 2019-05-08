@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const List = styled.div`
@@ -16,13 +17,13 @@ const Services = () => (
     <hr className="divider_60_2 main_bg_color" />
     <List>
       <li>
-        <a href="/">Residential</a>
+        <Link to="/residential">Residential</Link>
       </li>
       <li>
-        <a href="/">Commercial</a>
+        <Link to="/commercial">Commercial</Link>
       </li>
       <li>
-        <a href="/">Auto</a>
+        <Link to="/auto">Auto</Link>
       </li>
     </List>
   </div>
