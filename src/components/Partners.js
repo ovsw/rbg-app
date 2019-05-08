@@ -71,7 +71,6 @@ const Partners = ({ partnerData }) => {
 
   return (
     <section id="partners" className="cs ">
-      {console.log(partnerData)}
       <SliderStyled {...slideshowSettings}>
         {partnerData.map(({ node }) => (
           <SliderItem key={node.name}>
