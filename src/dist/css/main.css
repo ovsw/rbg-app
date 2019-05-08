@@ -10414,14 +10414,14 @@ body.active-side-header.slide-right .page_header_side {
 
 @media (max-width: 991px) and (max-width: 767px) {
 	.toggler_xs_right .toggle_menu {
-		right: 0;
+		right: 10px;
 		left: auto;
 	}
 }
 
 @media (max-width: 991px) and (max-width: 499px) {
 	.toggler_xxs_right .toggle_menu {
-		right: 0;
+		right: 10px;
 		left: auto;
 	}
 }
