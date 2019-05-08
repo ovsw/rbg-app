@@ -15,6 +15,7 @@ import PageTransition from '../components/pageTransitionPose'
 
 import RBGTheme from '../theme/defaultTheme'
 
+import MobileNav from '../components/Header/MobileNav'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer'
 import './layout.css'
@@ -38,19 +39,21 @@ class Layout extends React.Component {
     }
 
     this.toggleMenu = () => {
-      this.setState(state => {
-        console.log('from toggleMenu - is menu open?', state.isMenuOpen)
-        return {
-          isMenuOpen: !state.isMenuOpen,
-        }
-      })
+      this.setState(state => ({
+        isMenuOpen: !state.isMenuOpen,
+      }))
+    }
+
+    this.closeMenu = () => {
+      this.setState(state => ({
+        isMenuOpen: false,
+      }))
     }
 
     // snchronize the Menu component internal state with the state of this Layout component.
     // we update the isMenuOpen state of the Layout based on the isOpen state of the Menu component
     // otherwise  we have to click twice on the hamburger button to open the menu
     this.updateMenuState = menuState => {
-      console.log(menuState.isOpen)
       this.setState(state => ({
         isMenuOpen: menuState.isOpen,
       }))
@@ -61,60 +64,10 @@ class Layout extends React.Component {
     const { children, location } = this.props
     const { isMenuOpen } = this.state
 
-    const mobileMenuStyles = {
-      bmCrossButton: {
-        height: '44px',
-        width: '44px',
-      },
-      bmCross: {
-        background: '#81d612',
-      },
-      bmMenuWrap: {
-        position: 'fixed',
-        height: '100%',
-      },
-      bmMenu: {
-        background: '#373a47',
-        padding: '2.5em 1.5em 0',
-        fontSize: '1.15em',
-      },
-      bmMorphShape: {
-        fill: '#373a47',
-      },
-      bmItemList: {
-        color: '#b8b7ad',
-        padding: '0.8em',
-      },
-      bmItem: {
-        display: 'inline-block',
-      },
-      bmOverlay: {
-        background: 'rgba(0, 0, 0, 0.3)',
-      },
-    }
-
     return (
       <ThemeProvider theme={RBGTheme}>
         <div id="outer-container">
-          <MobileMenu
-            right
-            isOpen={isMenuOpen}
-            onStateChange={this.updateMenuState}
-            customBurgerIcon={false}
-            pageWrapId="page-wrap"
-            outerContainerId="outer-container"
-            styles={mobileMenuStyles}
-          >
-            <a id="home" className="menu-item" href="/">
-              Home
-            </a>
-            <a id="about" className="menu-item" href="/about">
-              About
-            </a>
-            <a id="contact" className="menu-item" href="/contact">
-              Contact
-            </a>
-          </MobileMenu>
+          <MobileNav isMenuOpen={isMenuOpen} updateMenuState={this.updateMenuState} closeMenu={this.closeMenu} />
           <div id="page-wrap">
             <Header toggleMenu={this.toggleMenu} />
             <main>

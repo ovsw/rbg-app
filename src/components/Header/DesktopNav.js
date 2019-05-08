@@ -19,15 +19,12 @@ const MainNav = () => {
     }
   `)
 
-  // console.log(data.site.siteMetadata)
-
   return (
     <nav className="mainmenu_wrapper">
       <ul className="mainmenu nav sf-menu sf-js-enabled sf-arrows">
         {data.site.siteMetadata.siteNav.map(item => (
           <li>
             <Link to={item.link}>{item.title}</Link>
-            {console.log(item.children[0].title)}
             {item.children[0].title !== 'empty' && (
               <ul>
                 {item.children.map(subitem => (
