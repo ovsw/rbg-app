@@ -18,7 +18,7 @@ const RecentPosts = () => {
 
   return (
     <div className="widget widget_recent_posts">
-      <h3 className="widget-title">Recent Posts</h3>
+      <h3 className="widget-title">Company News</h3>
       <hr className="divider_60_2 main_bg_color" />
       <ul>
         {data.allDatoCmsNewsArticle.edges.map(({ node }) => (
