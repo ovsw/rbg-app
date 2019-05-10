@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const RecentPosts = () => {
   const data = useStaticQuery(graphql`
@@ -24,10 +24,10 @@ const RecentPosts = () => {
         {data.allDatoCmsNewsArticle.edges.map(({ node }) => (
           <li>
             <div className="categories-links highlightlinks">
-              <a href="blog-left.html">{node.shortDate}</a>
+              <Link to={`/news/${node.slug}`}>{node.shortDate}</Link>
             </div>
             <h5>
-              <a href="blog-single-left.html">{node.title}</a>
+              <Link to={`/news/${node.slug}`}>{node.title}</Link>
             </h5>
           </li>
         ))}
