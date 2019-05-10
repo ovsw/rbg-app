@@ -7,9 +7,17 @@ const About = props => (
       <div className="row">
         <div className="col-md-6 col-md-push-6">
           <div className="embed-responsive embed-responsive-3by2">
-            <a href="//player.vimeo.com/video/1084537" className="embed-placeholder">
+            {/* <a href="//player.vimeo.com/video/1084537" className="embed-placeholder">
               <img src={VideoBgImage} alt="" />
-            </a>
+            </a> */}
+            <video id="background-video" loop autoPlay muted>
+              <source src="https://rbgvideo-ac97.kxcdn.com/shower-cabin-time-lapse-1.mp4" type="video/mp4" />
+              {/* <source
+                src="https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_5mb.ogg"
+                type="video/ogg"
+              /> */}
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
