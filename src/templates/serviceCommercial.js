@@ -11,6 +11,7 @@ export const query = graphql`
   query ServiceCommercialPageQuery($slug: String!) {
     datoCmsServiceCommercial(slug: { eq: $slug }) {
       title
+      tagline
       body {
         ... on DatoCmsTextBlock {
           id
