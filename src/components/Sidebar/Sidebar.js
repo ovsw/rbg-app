@@ -9,6 +9,7 @@ const SidebarStyled = styled.aside``
 
 const BadgeImage = styled(Img)`
   max-width: 200px;
+  ${tw`mx-auto md:mx-0`}
 `
 
 const Sidebar = () => {
@@ -17,7 +18,7 @@ const Sidebar = () => {
       guaranteeBadgeImg: file(relativePath: { eq: "guarantee-badge.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

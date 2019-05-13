@@ -1,14 +1,20 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 import { useStaticQuery, graphql, Link } from 'gatsby'
+
+const BadgeImageWrapper = styled(Link)`
+  ${tw`block mx-auto`};
+  max-width: 200px;
+`
 
 const Footer = props => {
   const data = useStaticQuery(graphql`
     query {
       guaranteeBadgeImg: file(relativePath: { eq: "guarantee-badge.png" }) {
         childImageSharp {
-          fixed(width: 220, height: 220) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 220) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -35,9 +41,9 @@ const Footer = props => {
           </div>
           <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
             <div className="widget widget_recent_entries">
-              <Link to="/our-guarantee">
-                <Img fixed={data.guaranteeBadgeImg.childImageSharp.fixed} alt="100% Guarantee Badge" />
-              </Link>
+              <BadgeImageWrapper to="/our-guarantee">
+                <Img fluid={data.guaranteeBadgeImg.childImageSharp.fluid} alt="100% Guarantee Badge" />
+              </BadgeImageWrapper>
             </div>
           </div>
           <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
