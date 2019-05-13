@@ -1,13 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import RecentPosts from './RecentPosts'
 import Services from './Services'
 
 const SidebarStyled = styled.aside``
 
-const Sidebar = () => (
-  <SidebarStyled className="col-sm-5 col-md-4 col-lg-3">
-    {/* <div className="widget widget_search">
+const BadgeImage = styled(Img)`
+  max-width: 200px;
+`
+
+const Sidebar = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      guaranteeBadgeImg: file(relativePath: { eq: "guarantee-badge.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <SidebarStyled className="col-sm-5 col-md-4 col-lg-3">
+      {/* <div className="widget widget_search">
       <h3 className="widget-title">Search On Website</h3>
       <hr className="divider_60_2 main_bg_color" />
       <form className="searchform" action="./" method="get">
@@ -29,43 +47,47 @@ const Sidebar = () => (
         </button>
       </form>
     </div> */}
-    <Services />
-    <RecentPosts />
-    <div className="widget widget_apsc_widget">
-      <h3 className="widget-title">Social News</h3>
-      <hr className="divider_60_2 main_bg_color" />
-      <div>
-        <a
-          className="social-icon border-icon rounded-icon socicon-facebook"
-          href="https://www.facebook.com/ashur.raben.5"
-          title="Facebook"
-          rel="nooperner noreferrer"
-          target="_blank"
-        />
-        <a
-          className="social-icon border-icon rounded-icon socicon-twitter"
-          href="/"
-          title="Twitter"
-          rel="nooperner noreferrer"
-          target="_blank"
-        />
-        <a
-          className="social-icon border-icon rounded-icon socicon-youtube"
-          href="/"
-          title="Youtube"
-          rel="nooperner noreferrer"
-          target="_blank"
-        />
-        <a
-          className="social-icon border-icon rounded-icon socicon-googleplus"
-          href="/"
-          title="Google Plus"
-          rel="nooperner noreferrer"
-          target="_blank"
-        />
+      <div className="widget widget_apsc_widget">
+        <div>
+          <a
+            className="social-icon border-icon rounded-icon socicon-facebook"
+            href="https://www.facebook.com/ashur.raben.5"
+            title="Facebook"
+            rel="nooperner noreferrer"
+            target="_blank"
+          />
+          <a
+            className="social-icon border-icon rounded-icon socicon-twitter"
+            href="/"
+            title="Twitter"
+            rel="nooperner noreferrer"
+            target="_blank"
+          />
+          <a
+            className="social-icon border-icon rounded-icon socicon-youtube"
+            href="/"
+            title="Youtube"
+            rel="nooperner noreferrer"
+            target="_blank"
+          />
+          <a
+            className="social-icon border-icon rounded-icon socicon-googleplus"
+            href="/"
+            title="Google Plus"
+            rel="nooperner noreferrer"
+            target="_blank"
+          />
+        </div>
       </div>
-    </div>
-    <div className="widget widget_mailchimp">
+      <div>
+        <Link to="/our-guarantee">
+          <BadgeImage fluid={data.guaranteeBadgeImg.childImageSharp.fluid} alt="100% Guarantee Badge" />
+        </Link>
+      </div>
+      <Services />
+      <RecentPosts />
+
+      {/* <div className="widget widget_mailchimp">
       <h3 className="widget-title">Newsletter Signup</h3>
       <hr className="divider_60_2 main_bg_color" />
       <form className="signup" action="./" method="get">
@@ -88,8 +110,8 @@ const Sidebar = () => (
         </div>
         <div className="response"> </div>
       </form>
-    </div>
-  </SidebarStyled>
-)
-
+    </div> */}
+    </SidebarStyled>
+  )
+}
 export default Sidebar
