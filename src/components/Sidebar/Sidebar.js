@@ -79,7 +79,7 @@ const Sidebar = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="widget">
         <Link to="/our-guarantee">
           <BadgeImage fluid={data.guaranteeBadgeImg.childImageSharp.fluid} alt="100% Guarantee Badge" />
         </Link>
