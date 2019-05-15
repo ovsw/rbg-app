@@ -113,6 +113,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://rbg-app.netlify.com',
+        sitemap: 'https://rbg-app.netlify.com/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: '/' }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
