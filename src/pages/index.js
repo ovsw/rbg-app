@@ -5,6 +5,7 @@ import Image from '../components/image'
 import SEO from '../components/seo'
 
 import Hero from '../components/home/Hero'
+import CTASection from '../components/CTASection'
 import Features from '../components/home/Features'
 import Features2 from '../components/home/Features2'
 import About from '../components/home/About'
@@ -16,8 +17,8 @@ const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
+    <CTASection />
     <Features />
-
     <Services theme="ls" title="Services" subtitle="Residential" services={data.allDatoCmsServiceResidential.edges} />
     <Services theme="ds" title="Services" subtitle="Commercial" services={data.allDatoCmsServiceCommercial.edges} />
     {/* <Features2 /> */}
@@ -48,7 +49,7 @@ export const query = graphql`
           iconImage {
             url
             fixed(width: 84, imgixParams: { fm: "png", auto: "compress" }) {
-              ...GatsbyDatoCmsFixed
+              ...GatsbyDatoCmsFixed_noBase64
             }
           }
         }
@@ -64,7 +65,7 @@ export const query = graphql`
           iconImage {
             url
             fixed(width: 84, imgixParams: { fm: "png", auto: "compress" }) {
-              ...GatsbyDatoCmsFixed
+              ...GatsbyDatoCmsFixed_noBase64
             }
           }
         }
