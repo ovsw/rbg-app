@@ -28,7 +28,7 @@ const Footer = props => {
             logo {
               url
               fixed(height: 80, imgixParams: { fm: "png", auto: "compress" }) {
-                ...GatsbyDatoCmsFixed
+                ...GatsbyDatoCmsFixed_noBase64
               }
             }
           }
