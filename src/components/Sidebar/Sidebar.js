@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import RecentPosts from './RecentPosts'
-import Services from './Services'
+import Services from './Services/Services'
 
 const SidebarStyled = styled.aside``
 
