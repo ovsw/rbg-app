@@ -22,7 +22,7 @@ const RecentPosts = () => {
       <hr className="divider_60_2 main_bg_color" />
       <ul>
         {data.allDatoCmsNewsArticle.edges.map(({ node }) => (
-          <li>
+          <li key={node.slug}>
             <div className="categories-links highlightlinks">
               <Link to={`/news/${node.slug}`}>{node.shortDate}</Link>
             </div>

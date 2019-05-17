@@ -81,12 +81,12 @@ const MobileNav = ({ isMenuOpen, updateMenuState, closeMenu }) => {
       disableAutoFocus
     >
       {data.site.siteMetadata.siteNav.map(item => (
-        <MenuItem>
+        <MenuItem key={item.link}>
           <Link to={item.link}>{item.title}</Link>
           {item.children[0].title !== 'empty' && (
             <SubMenuWrapper>
               {item.children.map(subitem => (
-                <li>
+                <li key={subitem.link}>
                   <Link to={subitem.link} onClick={closeMenu}>
                     {subitem.title}
                   </Link>
