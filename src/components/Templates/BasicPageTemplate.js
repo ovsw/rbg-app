@@ -5,8 +5,9 @@ import MainContentWrapper from '../common/MainContentWrapper'
 import TextBlock from '../contentBlocks/TextBlock'
 import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
+import MapContact from '../MapContact'
 
-const BasicPageTemplate = ({ data: { title, body } }) => (
+const BasicPageTemplate = ({ data: { title, body }, map }) => (
   <>
     <PageHeading title={title} />
 
@@ -25,6 +26,7 @@ const BasicPageTemplate = ({ data: { title, body } }) => (
                   </div>
                 ))}
               </div>
+              {map && <MapContact />}
             </MainContentWrapper>
           </div>
 

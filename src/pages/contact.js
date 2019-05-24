@@ -4,7 +4,7 @@ import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const ContactPage = ({ data }) => (
   <>
-    <BasicPageTemplate data={data.datoCmsContactPage} />
+    <BasicPageTemplate data={data.datoCmsContactPage} map />
   </>
 )
 
