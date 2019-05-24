@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
+import CTASection from './CTASection'
 
 const Section = styled(BackgroundImage)`
   ${tw`relative pt-32`};
@@ -42,19 +43,22 @@ const PageHeader = ({ title }) => {
   `)
 
   return (
-    <Section fluid={data.headerImage.childImageSharp.fluid} backgroundColor="#000000" className="">
-      <Overlay />
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12 text-center">
-            <MainHeading>{title}</MainHeading>
-            {/* <SubHeading>
+    <>
+      <Section fluid={data.headerImage.childImageSharp.fluid} backgroundColor="#000000" className="">
+        <Overlay />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 text-center">
+              <MainHeading>{title}</MainHeading>
+              {/* <SubHeading>
               <span>frame fix / adjustment, glass replacement, hardware replacement</span>
             </SubHeading> */}
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+      <CTASection />
+    </>
   )
 }
 
