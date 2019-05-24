@@ -48,9 +48,9 @@ const PageHeader = ({ title }) => {
         <div className="row">
           <div className="col-sm-12 text-center">
             <MainHeading>{title}</MainHeading>
-            <SubHeading>
+            {/* <SubHeading>
               <span>frame fix / adjustment, glass replacement, hardware replacement</span>
-            </SubHeading>
+            </SubHeading> */}
           </div>
         </div>
       </div>
