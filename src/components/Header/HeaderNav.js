@@ -30,7 +30,7 @@ const HeaderNav = ({ toggleMenu }) => (
             <div className="col-sm-12 display_table">
               <div className="header_left_logo display_table_cell">
                 <Link to="/" className="logo top_logo">
-                  <img src="/img/raben-glass-logo.png" alt="Raben Glass LLC logo" />
+                  <img src="/img/raben-glass-logo-green.png" alt="Raben Glass LLC logo" />
                 </Link>
               </div>
               <div className="header_mainmenu display_table_cell text-center">
