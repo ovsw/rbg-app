@@ -3,9 +3,9 @@ import { graphql } from 'gatsby'
 
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
-const basicPageTemplate = ({ data }) => <BasicPageTemplate data={data.datoCmsServiceCommercial} />
+const CommercialServicePage = ({ data }) => <BasicPageTemplate data={data.datoCmsServiceCommercial} />
 
-export default basicPageTemplate
+export default CommercialServicePage
 
 export const query = graphql`
   query ServiceCommercialPageQuery($slug: String!) {

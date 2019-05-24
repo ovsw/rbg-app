@@ -3,15 +3,14 @@ import { graphql } from 'gatsby'
 
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
-const ResidentialServicePage = ({ data }) => <BasicPageTemplate data={data.datoCmsServiceResidential} />
+const BasicPage = ({ data }) => <BasicPageTemplate data={data.datoCmsBasicPage} />
 
-export default ResidentialServicePage
+export default BasicPage
 
 export const query = graphql`
-  query ServiceResidentialPageQuery($slug: String!) {
-    datoCmsServiceResidential(slug: { eq: $slug }) {
+  query BaiscPageQuery($slug: String!) {
+    datoCmsBasicPage(slug: { eq: $slug }) {
       title
-      tagline
       body {
         ... on DatoCmsTextBlock {
           id

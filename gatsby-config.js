@@ -73,7 +73,7 @@ module.exports = {
       },
       {
         title: 'Auto Glass',
-        link: '/auto',
+        link: '/auto-glass',
         children: [{ title: 'empty', url: '/' }],
       },
       {
