@@ -46,6 +46,7 @@ const Services = () => {
         </li>
         <li>
           <Link to="/auto">Auto</Link>
+          <SubItemListing items={[{ title: 'Windshield Glass Replacement & Repair', link: '/auto' }]} />
         </li>
       </List>
     </div>
