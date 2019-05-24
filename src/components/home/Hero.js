@@ -20,7 +20,7 @@ const HeroContent = styled.div`
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      slide1: file(relativePath: { eq: "slide1.jpg" }) {
+      slide1: file(relativePath: { eq: "hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1925, duotone: { highlight: "#ffffff", shadow: "#051020", opacity: 50 }) {
             ...GatsbyImageSharpFluid
