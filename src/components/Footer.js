@@ -68,7 +68,7 @@ const Footer = props => {
             <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
               <div className="widget widget_text">
                 <h3 className="widget-title">Contact Us</h3>
-                <p>PO Box 7685, Mesa, AZ 85216, United States</p>
+                {/* <p>PO Box 7685, Mesa, AZ 85216, United States</p> */}
                 <ul className="list1 no-bullets">
                   <li>
                     <i className="rt-icon2-device-phone highlight" /> <a href="tel:623-466-5376">(623) 466 5376</a>
