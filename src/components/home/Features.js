@@ -63,7 +63,7 @@ const Features = props => {
               <div className="media-body media-middle">
                 <h4 className="text-uppercase bottommargin_10">Residential</h4>
                 <span>
-                  We offer repair to damaged glass and adding new glass to your home, call for free quote and estimates.
+                  We repair and replace single and dual pane windows and provide free measuring and estimates.
                 </span>
               </div>
             </Column>
@@ -80,7 +80,7 @@ const Features = props => {
               </div>
               <div className="media-body media-middle">
                 <h4 className="text-uppercase bottommargin_10">Commercial</h4>
-                <p>Repair damaged glass and adding new glass to your home, call for free quote and estimates.</p>
+                <p>Tenant improvements and new construction, including storefront glass and entrances.</p>
               </div>
             </Column>
           </div>
@@ -96,10 +96,7 @@ const Features = props => {
               </div>
               <div className="media-body media-middle">
                 <h4 className="text-uppercase bottommargin_10">Auto Glass</h4>
-                <p>
-                  Glass repair and replacement for all types of makes and models on foreign and domestic. Providing
-                  service for all insurance claims.
-                </p>
+                <p>Preferred insurance provider. Repair and replacement for all vehicle makes and models.</p>
               </div>
             </Column>
           </div>
