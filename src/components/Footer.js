@@ -86,10 +86,10 @@ const Footer = props => {
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
-                      href="https://www.facebook.com/ashur.raben.5"
+                      href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
                       className="social-icon color-icon border-icon rounded-icon socicon-facebook"
-                      rel="noopener noreferrer"
                       target="_blank"
+                      rel="noopener noreferrer"
                     />
                   </div>
                   <div className="media-body media-middle">Facebook</div>
@@ -97,10 +97,10 @@ const Footer = props => {
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
-                      href="/"
+                      href="https://twitter.com/RabenGlass"
                       className="social-icon color-icon border-icon rounded-icon socicon-twitter"
-                      rel="noopener noreferrer"
                       target="_blank"
+                      rel="noopener noreferrer"
                     />
                   </div>
                   <div className="media-body media-middle">Twitter</div>
@@ -108,24 +108,24 @@ const Footer = props => {
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
-                      href="/"
-                      className="social-icon color-icon border-icon rounded-icon socicon-linkedin"
-                      rel="noopener noreferrer"
+                      href="https://www.instagram.com/rabenglass/"
+                      className="social-icon color-icon border-icon rounded-icon socicon-instagram"
                       target="_blank"
+                      rel="noopener noreferrer"
                     />
                   </div>
-                  <div className="media-body media-middle">LinkedIn</div>
+                  <div className="media-body media-middle">Instagram</div>
                 </div>
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
-                      href="/"
-                      className="social-icon color-icon border-icon rounded-icon socicon-pinterest"
-                      rel="noopener noreferrer"
+                      href="https://www.youtube.com/channel/UCLMSBR0PrpMC-1px44GhJBg"
+                      className="social-icon color-icon border-icon rounded-icon socicon-youtube"
                       target="_blank"
+                      rel="noopener noreferrer"
                     />
                   </div>
-                  <div className="media-body media-middle">Pinterest</div>
+                  <div className="media-body media-middle">YouTube</div>
                 </div>
               </div>
             </div>

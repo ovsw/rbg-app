@@ -57,31 +57,31 @@ const Sidebar = () => {
         <SocialWrapper>
           <a
             className="social-icon border-icon rounded-icon socicon-facebook"
-            href="https://www.facebook.com/ashur.raben.5"
+            href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
             title="Facebook"
-            rel="nooperner noreferrer"
             target="_blank"
+            rel="noopener noreferrer"
           />
           <a
             className="social-icon border-icon rounded-icon socicon-twitter"
-            href="/"
+            href="https://twitter.com/RabenGlass"
             title="Twitter"
-            rel="nooperner noreferrer"
             target="_blank"
+            rel="noopener noreferrer"
+          />
+          <a
+            className="social-icon border-icon rounded-icon socicon-instagram"
+            href="https://www.instagram.com/rabenglass/"
+            title="Google Plus"
+            target="_blank"
+            rel="noopener noreferrer"
           />
           <a
             className="social-icon border-icon rounded-icon socicon-youtube"
-            href="/"
-            title="Youtube"
-            rel="nooperner noreferrer"
+            href="https://www.youtube.com/channel/UCLMSBR0PrpMC-1px44GhJBg"
+            title="YouTube"
             target="_blank"
-          />
-          <a
-            className="social-icon border-icon rounded-icon socicon-googleplus"
-            href="/"
-            title="Google Plus"
-            rel="nooperner noreferrer"
-            target="_blank"
+            rel="noopener noreferrer"
           />
         </SocialWrapper>
       </div>

@@ -20,19 +20,40 @@ const Header = ({ siteTitle, toggleMenu }) => (
           </div>
           <div className="col-sm-4 text-center text-sm-right greylinks hidden-xs">
             <span className="rightpadding_10">Follow Us:</span>
-            <a href="/" title="Facebook" style={{ marginLeft: '0.51rem' }}>
+            <a
+              href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
+              title="Facebook"
+              style={{ marginLeft: '0.51rem' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="social-icon color-icon socicon-facebook" />
             </a>
-            <a href="/" title="Twitter" style={{ marginLeft: '0.51rem' }}>
+            <a
+              href="https://twitter.com/RabenGlass"
+              title="Twitter"
+              style={{ marginLeft: '0.51rem' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="social-icon color-icon socicon-twitter" />
             </a>
-            <a href="/" title="Twitter" style={{ marginLeft: '0.51rem' }}>
-              <i className="social-icon color-icon socicon-google" />
+            <a
+              href="https://www.instagram.com/rabenglass/"
+              title="Instagram"
+              style={{ marginLeft: '0.51rem' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="social-icon color-icon socicon-instagram" />
             </a>
-            <a href="/" title="Twitter" style={{ marginLeft: '0.51rem' }}>
-              <i className="social-icon color-icon socicon-linkedin" />
-            </a>
-            <a href="/" title="Youtube" style={{ marginLeft: '0.51rem' }}>
+            <a
+              href="https://www.youtube.com/channel/UCLMSBR0PrpMC-1px44GhJBg"
+              title="YouTube"
+              style={{ marginLeft: '0.51rem' }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="social-icon color-icon socicon-youtube" />
             </a>
           </div>
