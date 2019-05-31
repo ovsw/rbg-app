@@ -6,6 +6,7 @@ const sizes = {
   lg: 992,
   md: 768,
   sm: 576,
+  xs: 320,
 }
 
 // Iterate through the sizes and create a media template
