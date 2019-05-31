@@ -14,7 +14,7 @@ const BasicPageTemplate = ({ data: { title, body }, map }) => (
     <section className="ls section_padding_top_100 section_padding_bottom_100">
       <div className="container">
         <div className="row">
-          <div className="col-sm-7 col-md-8 col-lg-9">
+          <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <MainContentWrapper>
               <div className="entry-content">
                 {body.map(block => (
