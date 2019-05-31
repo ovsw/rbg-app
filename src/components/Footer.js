@@ -47,14 +47,11 @@ const Footer = props => {
             <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
               <div className="widget widget_text">
                 <h3 className="widget-title">Raben Glass LLC</h3>
-                <p>
-                  Consetetur sadipscing elitr, sed dinonumy eirmod tempor ut labore edolore magna aliquyam erat, sed
-                  diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren.
-                </p>
+                <p>ROC# 317531 LICENSED, BONDED AND INSURED. ALL WORK AND PRODUCTS GUARANTEED.</p>
                 <p className="topmargin_40">
-                  <a href="#" className="theme_button color1">
+                  <Link to="/contact" className="theme_button color1">
                     Free Quote
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
