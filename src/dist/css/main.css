@@ -9946,7 +9946,7 @@ body.active-side-header.slide-right .page_header_side {
 @media (min-width: 992px) {
 	.intro_section .slide_description {
 		font-size: 20px;
-		max-width: 600px;
+		/* max-width: 600px; */
 	}
 
 	.header_transparent_wrap + .page_mainslider .slide_description_wrapper {

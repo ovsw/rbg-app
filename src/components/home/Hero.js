@@ -43,13 +43,13 @@ const Hero = () => {
             <div className="slide_description_wrapper">
               <div className="slide_description">
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
-                  <p className="bold text-uppercase highlight">welcome to the clearview</p>
-                  <h2>over 40 years of experience in the Glass Industry</h2>
+                  <p className="bold text-uppercase highlight">welcome to Raben Glass</p>
+                  <h2>
+                    Glass Repair &amp; Replacement <br /> Residential and Commercial
+                  </h2>
                 </div>
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
-                  <p>
-                    Here at Raben Glass we put you first while making sure we provide the best service we possibly can.
-                  </p>
+                  <p>Over 40 years of experience in the glass industry Our work and products are guaranteed</p>
                 </div>
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
                   <div className="slide_buttons">
