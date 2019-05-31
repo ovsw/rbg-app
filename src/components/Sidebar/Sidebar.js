@@ -4,12 +4,17 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import RecentPosts from './RecentPosts'
 import Services from './Services/Services'
+import media from '../responsive'
 
 const SidebarStyled = styled.aside``
 
 const BadgeImage = styled(Img)`
   max-width: 200px;
   ${tw`mx-auto md:mx-0`}
+`
+const SocialWrapper = styled.div`
+  ${media.xs`text-align: center`};
+  ${media.md`text-align: left`};
 `
 
 const Sidebar = () => {
@@ -25,7 +30,7 @@ const Sidebar = () => {
     }
   `)
   return (
-    <SidebarStyled className="col-sm-5 col-md-4 col-lg-3">
+    <SidebarStyled className="col-xs-12 col-sm-3 col-md-3 col-lg-3">
       {/* <div className="widget widget_search">
       <h3 className="widget-title">Search On Website</h3>
       <hr className="divider_60_2 main_bg_color" />
@@ -49,7 +54,7 @@ const Sidebar = () => {
       </form>
     </div> */}
       <div className="widget widget_apsc_widget">
-        <div>
+        <SocialWrapper>
           <a
             className="social-icon border-icon rounded-icon socicon-facebook"
             href="https://www.facebook.com/ashur.raben.5"
@@ -78,7 +83,7 @@ const Sidebar = () => {
             rel="nooperner noreferrer"
             target="_blank"
           />
-        </div>
+        </SocialWrapper>
       </div>
       <div className="widget">
         <Link to="/our-guarantee">
