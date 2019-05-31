@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const ContentWrapper = styled.article`
   border-right: ${props => (!props.noborder ? `2px solid ${props.theme.accentColor}` : `none`)};
   border-bottom: ${props => (!props.noborder ? `2px solid ${props.theme.accentColor}` : `none!important`)};
+  padding-bottom: 2rem;
 `
 const Content = styled.div`
   padding-top: 0 !important;
