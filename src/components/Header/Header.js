@@ -14,8 +14,8 @@ const Header = ({ siteTitle, toggleMenu }) => (
         <div className="row">
           <div className="col-sm-8 text-center text-sm-left">
             <div className="">
-              <i className="fa fa-clock-o rightpadding_5 " aria-hidden="true" />
-              SEO Tagline goes right here at the top
+              <i className="fa fa-star-o rightpadding_5 " aria-hidden="true" />
+              Mesa Glass Repair and Replacement
             </div>
           </div>
           <div className="col-sm-4 text-center text-sm-right greylinks hidden-xs">
