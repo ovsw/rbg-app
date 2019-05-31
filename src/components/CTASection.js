@@ -9,7 +9,7 @@ const CTAContentWrapper = styled.div`
   ${media.lg`text-align: right`};
 `
 const CTAButtonWrapper = styled.div`
-  ${media.lg`text-align: left!important`};
+  ${media.lg`text-align: left!important;`};
 `
 
 const CTATitle = styled.h2`
@@ -23,7 +23,9 @@ const CTATextWrapper = styled.div`
 const ActionButton = styled(Link)`
   color: black !important;
 `
-
+const PhoneButton = styled.a`
+  margin: 0 1rem 0 0 !important;
+`
 const CTASection = props => {
   const data = useStaticQuery(graphql`
     query CTAQuery {
@@ -38,10 +40,10 @@ const CTASection = props => {
   useEffect(() => setDate(new Date()), [])
 
   return (
-    <section className="cs main_color2  section_padding_top_15 section_padding_bottom_15  table_section   section_bottom_overlap table_section_sm">
+    <section className="cs main_color2  section_padding_top_15 section_padding_bottom_15 section_bottom_overlap  table_section  table_section_md">
       <div className="container">
         <div className="row">
-          <div className="col-sm-8 col-lg-6">
+          <div className="col-sm-12 col-md-5">
             <CTAContentWrapper>
               <CTATitle>{data.datoCmsHome.currentDealTitle}</CTATitle>
               <CTATextWrapper>
@@ -55,9 +57,12 @@ const CTASection = props => {
               </CTATextWrapper>
             </CTAContentWrapper>
           </div>
-          <CTAButtonWrapper className="col-sm-4 col-lg-6 text-center">
-            <ActionButton to="/" className="theme_button min_width_button color1 margin_0">
-              See offer
+          <CTAButtonWrapper className="col-sm-12 col-md-7 text-center">
+            <PhoneButton href="tel:623-4665376" className="theme_button min_width_button color1 ">
+              Call Now
+            </PhoneButton>
+            <ActionButton to="/contact" className="theme_button min_width_button color1 margin_0">
+              Contact us
             </ActionButton>
           </CTAButtonWrapper>
         </div>
