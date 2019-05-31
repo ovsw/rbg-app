@@ -21,7 +21,7 @@ module.exports = {
           },
           {
             title: 'Window Glass Repair',
-            link: '/residential/window-glass-repair',
+            link: '/residential/residential-window-glass-repair',
           },
           {
             title: 'Glass Tabletops',
