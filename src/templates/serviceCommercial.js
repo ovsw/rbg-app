@@ -20,6 +20,22 @@ export const query = graphql`
           }
           content
         }
+        ... on DatoCmsImageBlock {
+          id
+          model {
+            apiKey
+          }
+          image {
+            url
+            alt
+            fluid(
+              maxWidth: 785
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines" }
+            ) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
+          }
+        }
       }
     }
   }
