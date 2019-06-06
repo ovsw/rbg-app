@@ -17,15 +17,15 @@ module.exports = {
         children: [
           {
             title: 'Window Replacement',
-            link: '/residential/single-dual-pane-window-replacement',
+            link: '/residential/full-frame-window-replacement',
           },
           {
             title: 'Window Glass Repair',
-            link: '/residential/residential-window-glass-repair',
+            link: '/residential/residential-window-glass-repair-replace',
           },
           {
             title: 'Glass Tabletops',
-            link: '/residential/glass-tabletops',
+            link: '/residential/glass-tabletops-shelves',
           },
           {
             title: 'Custom Mirrors',
@@ -33,7 +33,7 @@ module.exports = {
           },
           {
             title: 'Shower Enclosures',
-            link: '/residential/shower-enclosures',
+            link: '/residential/glass-shower-enclosures',
           },
         ],
       },
@@ -50,10 +50,6 @@ module.exports = {
             link: '/commercial/window-doors-glass-replacement',
           },
           {
-            title: 'Custom Glass Tabletops',
-            link: '/commercial/custom-glass-tabletops',
-          },
-          {
             title: '1/2" Glass Walls & Entrances',
             link: '/commercial/half-inch-glass-walls-and-entrances',
           },
@@ -66,8 +62,8 @@ module.exports = {
             link: '/commercial/multi-slide-doors-partitions',
           },
           {
-            title: 'Closure / Hardware Replacement',
-            link: '/commercial/closure-hardware-replacement',
+            title: 'Closers / Hardware Replacement',
+            link: '/commercial/closers-hardware-replacement',
           },
         ],
       },
