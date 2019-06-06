@@ -7,34 +7,38 @@ import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
 import MapContact from '../MapContact'
 
-const BasicPageTemplate = ({ data: { title, body, headerImage }, map }) => (
-  <>
-    <PageHeading title={title} image={headerImage} />
+const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage }, map }) => {
+  const pageHeaderImage = headerImage || coverImage
 
-    <section className="ls section_padding_top_100 section_padding_bottom_100">
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-            <MainContentWrapper>
-              <div className="entry-content">
-                {body.map(block => (
-                  <div key={block.id}>
-                    {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
-                    {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
-                    {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
+  return (
+    <>
+      <PageHeading title={title} image={pageHeaderImage} />
+
+      <section className="ls section_padding_top_100 section_padding_bottom_100">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+              <MainContentWrapper>
+                <div className="entry-content">
+                  {body.map(block => (
+                    <div key={block.id}>
+                      {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
+                      {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
+                      {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
                       {block.model.apiKey === 'video' && <VideoBlock block={block} />} */}
-                  </div>
-                ))}
-              </div>
-              {map && <MapContact />}
-            </MainContentWrapper>
-          </div>
+                    </div>
+                  ))}
+                </div>
+                {map && <MapContact />}
+              </MainContentWrapper>
+            </div>
 
-          <Sidebar />
+            <Sidebar />
+          </div>
         </div>
-      </div>
-    </section>
-  </>
-)
+      </section>
+    </>
+  )
+}
 
 export default BasicPageTemplate

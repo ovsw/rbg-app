@@ -17,6 +17,16 @@ export const query = graphql`
   query NewsArticleQuery($slug: String!) {
     datoCmsNewsArticle(slug: { eq: $slug }) {
       title
+      coverImage {
+        url
+        alt
+        fluid(
+          maxWidth: 1920
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "lines,entropy" }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
       body {
         ... on DatoCmsTextBlock {
           id
