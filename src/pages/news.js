@@ -15,12 +15,12 @@ const ImageLink = styled(Link)`
 
 const NewsListingPage = ({
   data: {
-    datoCmsNewsLanding: { title, tagline },
+    datoCmsNewsLanding: { title, tagline, headerImage },
     allDatoCmsNewsArticle: { edges },
   },
 }) => (
   <>
-    <PageHeading title={title} />
+    <PageHeading title={title} image={headerImage} />
 
     <section className="ls section_padding_top_100 section_padding_bottom_100">
       <div className="container">
@@ -94,6 +94,16 @@ export const query = graphql`
   query NewsListingPageQuery {
     datoCmsNewsLanding {
       title
+      headerImage {
+        url
+        alt
+        fluid(
+          maxWidth: 1920
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "lines,entropy" }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
       tagline
     }
     allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 10) {

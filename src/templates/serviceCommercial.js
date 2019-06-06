@@ -12,6 +12,16 @@ export const query = graphql`
     datoCmsServiceCommercial(slug: { eq: $slug }) {
       title
       tagline
+      headerImage {
+        url
+        alt
+        fluid(
+          maxWidth: 1920
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "lines,entropy" }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
       body {
         ... on DatoCmsTextBlock {
           id

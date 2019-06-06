@@ -7,9 +7,9 @@ import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
 import MapContact from '../MapContact'
 
-const BasicPageTemplate = ({ data: { title, body }, map }) => (
+const BasicPageTemplate = ({ data: { title, body, headerImage }, map }) => (
   <>
-    <PageHeading title={title} />
+    <PageHeading title={title} image={headerImage} />
 
     <section className="ls section_padding_top_100 section_padding_bottom_100">
       <div className="container">

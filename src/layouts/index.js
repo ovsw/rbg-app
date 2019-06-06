@@ -36,6 +36,7 @@ class Layout extends React.Component {
 
     this.state = {
       isMenuOpen: false,
+      reviews: [],
     }
 
     this.toggleMenu = () => {
@@ -60,9 +61,32 @@ class Layout extends React.Component {
     }
   }
 
+  // async componentDidMount() {
+  //   const reviews = await fetch('https://embedsocial.com/admin/v2/api/reviews/feeds', {
+  //     method: 'get',
+  //     // mode: 'cors',
+  //     headers: new Headers({
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json; charset=utf-8',
+  //       Authorization: 'Bearer es3bcbb940f72160a282283251efab7f',
+  //     }),
+  //   }).then(
+  //     response => response.json()
+  //     // response.json()
+  //   )
+
+  //   console.log(reviews)
+
+  //   // this.setState({
+  //   //   reviews,
+  //   // })
+  // }
+
   render() {
     const { children, location } = this.props
-    const { isMenuOpen } = this.state
+    const { isMenuOpen, reviews } = this.state
+
+    console.log(reviews)
 
     return (
       <ThemeProvider theme={RBGTheme}>
