@@ -9,10 +9,10 @@ const Content = styled.div`
   padding-top: 0 !important;
 `
 
-const BasicPageTemplate = ({ pageData: { title, body, headerImage }, servicesData }) => (
+const BasicPageTemplate = ({ pageData: { title, body, headerImage }, servicesData, category }) => (
   <>
     <PageHeading title={title} image={headerImage} />
-    <Services theme="ls" title="Services" subtitle="Residential" services={servicesData} />
+    <Services theme="ls" title="Services" subtitle={category} services={servicesData} />
     <section className="ls section_padding_top_100 section_padding_bottom_100">
       <div className="container">
         <div className="row">

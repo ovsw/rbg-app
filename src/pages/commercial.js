@@ -7,6 +7,7 @@ const ServicesCommercialPage = ({ data }) => (
     <FullWidthPageTemplate
       pageData={data.datoCmsServicesCommercial}
       servicesData={data.allDatoCmsServiceCommercial.edges}
+      category="Commercial"
     />
   </>
 )
