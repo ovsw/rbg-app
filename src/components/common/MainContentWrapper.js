@@ -8,6 +8,9 @@ const ContentWrapper = styled.article`
 `
 const Content = styled.div`
   padding-top: 0 !important;
+  p {
+    font-size: 18px;
+    color: 111;
 `
 
 const MainContentWrapper = ({ children, noborder }) => (
