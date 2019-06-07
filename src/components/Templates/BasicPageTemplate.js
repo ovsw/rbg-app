@@ -29,7 +29,6 @@ const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embed
                     </div>
                   ))}
                 </div>
-                {map && <MapContact />}
                 {embedCodes && (
                   <>
                     <h2>Contact Us</h2>
@@ -40,6 +39,7 @@ const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embed
                     />
                   </>
                 )}
+                {map && <MapContact />}
               </MainContentWrapper>
             </div>
 
