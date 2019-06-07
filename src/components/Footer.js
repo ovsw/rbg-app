@@ -46,7 +46,7 @@ const Footer = props => {
           <div className="row">
             <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
               <div className="widget widget_text">
-                <h3 className="widget-title">Raben Glass LLC</h3>
+                <h3 className="widget-title">Raben Glass</h3>
                 <p>ROC# 317531 LICENSED, BONDED AND INSURED. ALL WORK AND PRODUCTS GUARANTEED.</p>
                 <p className="topmargin_40">
                   <Link to="/contact" className="theme_button color1">
@@ -75,7 +75,7 @@ const Footer = props => {
                   </li>
                   <li>
                     <i className="rt-icon2-mail2 highlight" />
-                    <a href="mailto:rabenglassllc@gmail.com">info@rabenglass.com</a>
+                    <a href="mailto:info@rabenglass.com">info@rabenglass.com</a>
                   </li>
                 </ul>
               </div>
