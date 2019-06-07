@@ -42,27 +42,27 @@ module.exports = {
         link: '/commercial',
         children: [
           {
-            title: 'Storefront Metal and Glass',
+            title: 'Storefront Metal & Glass Installation',
             link: '/commercial/storefront-metal-and-glass',
           },
           {
-            title: 'Window/Doors Glass Replacement',
-            link: '/commercial/window-doors-glass-replacement',
+            title: 'Glass Windows & Doors Replacement',
+            link: '/commercial/glass-windows-doors-replacement',
           },
           {
             title: '1/2" Glass Walls & Entrances',
             link: '/commercial/half-inch-glass-walls-and-entrances',
           },
           {
-            title: 'Commercial Doors',
-            link: '/commercial/commercial-doors',
+            title: 'Commercial Glass Doors & Windows',
+            link: '/commercial/commercial-glass-doors-windows',
           },
           {
-            title: 'Multi-Slide Doors / Partitions',
+            title: 'Multi-Slide Glass Doors & Partitions',
             link: '/commercial/multi-slide-doors-partitions',
           },
           {
-            title: 'Closers / Hardware Replacement',
+            title: 'Closers & Hardware Replacement',
             link: '/commercial/closers-hardware-replacement',
           },
         ],
