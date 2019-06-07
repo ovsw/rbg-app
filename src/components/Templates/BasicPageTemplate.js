@@ -7,7 +7,7 @@ import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
 import MapContact from '../MapContact'
 
-const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage }, map }) => {
+const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embedCodes }, map }) => {
   const pageHeaderImage = headerImage || coverImage
 
   return (
@@ -30,6 +30,16 @@ const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage }, map
                   ))}
                 </div>
                 {map && <MapContact />}
+                {embedCodes && (
+                  <>
+                    <h2>Contact Us</h2>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: embedCodes,
+                      }}
+                    />
+                  </>
+                )}
               </MainContentWrapper>
             </div>
 
