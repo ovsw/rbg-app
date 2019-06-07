@@ -16,6 +16,15 @@ const HeroContent = styled.div`
   ${tw`relative`};
   z-index: 10;
 `
+const HeroTitle = styled.h1`
+  span {
+    ${tw`block`};
+    font-size: 2rem;
+  }
+`
+const IntroText = styled.p`
+  margin-top: 2rem;
+`
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -40,17 +49,21 @@ const Hero = () => {
       <HeroContent className="container">
         <div className="row">
           <div className="col-sm-12">
-            <div className="slide_description_wrapper">
+            <div className="">
+              {/* *^^slide_description_wrapper */}
               <div className="slide_description">
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
                   <p className="bold text-uppercase highlight">welcome to Raben Glass</p>
-                  <h2>
-                    Glass Repair &amp; Replacement <br /> Residential and Commercial
-                  </h2>
+                  <HeroTitle>
+                    Glass Repair &amp; Replacement <span>Residential and Commercial</span>
+                  </HeroTitle>
                 </div>
-                <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
-                  <p>Over 40 years of experience in the glass industry Our work and products are guaranteed</p>
-                </div>
+                <IntroText className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
+                  <p>
+                    Over 40 years of experience in the glass industry.
+                    <br /> Our work and products are guaranteed.
+                  </p>
+                </IntroText>
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
                   <div className="slide_buttons">
                     <a href="contact.html" className="theme_button color1">
