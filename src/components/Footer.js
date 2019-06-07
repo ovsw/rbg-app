@@ -75,7 +75,7 @@ const Footer = props => {
                   </li>
                   <li>
                     <i className="rt-icon2-mail2 highlight" />
-                    <a href="mailto:rabenglassllc@gmail.com">rabenglassllc@gmail.com</a>
+                    <a href="mailto:rabenglassllc@gmail.com">info@rabenglass.com</a>
                   </li>
                 </ul>
               </div>
