@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 const SubList = styled.ul`
   ${tw``};
+  list-style-type: disc !important;
+
   li:before {
     content: '';
     width: 0.5rem;
@@ -13,17 +15,29 @@ const SubList = styled.ul`
     display: inline-block;
     background-color: #6b6b6b;
     border-radius: 50%;
+    position: absolute;
+    left: 0.45rem;
+    top: 0.55rem;
   }
   li a {
-    color: ${props => props.theme.accentColor}!important;
+    color: ${props => props.theme.accentColor};
+    &:hover {
+      color: black;
+    }
   }
 `
+const activeStyles = {
+  color: 'black',
+  // backgroundColor: 'red',
+}
 
 const SubItemListing = ({ items }) => (
   <SubList>
     {items.map(item => (
       <li key={item.link}>
-        <Link to={item.link}>{item.title}</Link>
+        <Link to={item.link} activeStyle={activeStyles}>
+          {item.title}
+        </Link>
       </li>
     ))}
   </SubList>

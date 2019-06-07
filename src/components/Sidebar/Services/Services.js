@@ -9,7 +9,6 @@ const List = styled.ul`
   }
   a {
     ${tw`font-bold`};
-    color: black !important;
   }
 `
 
