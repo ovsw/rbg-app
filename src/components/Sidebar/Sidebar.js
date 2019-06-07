@@ -27,6 +27,13 @@ const Sidebar = () => {
           }
         }
       }
+      homeAdvisorBadgeImg: file(relativePath: { eq: "toprated-solid-border.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `)
   return (
@@ -88,6 +95,7 @@ const Sidebar = () => {
       <div className="widget">
         <Link to="/our-guarantee">
           <BadgeImage fluid={data.guaranteeBadgeImg.childImageSharp.fluid} alt="100% Guarantee Badge" />
+          <BadgeImage fluid={data.homeAdvisorBadgeImg.childImageSharp.fluid} alt="Home Advisor Top Rated Badge" />
         </Link>
       </div>
       <Services />
