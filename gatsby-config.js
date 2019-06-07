@@ -20,11 +20,11 @@ module.exports = {
             link: '/residential/full-frame-window-replacement',
           },
           {
-            title: 'Window Glass Repair',
+            title: 'Window Repair',
             link: '/residential/residential-window-glass-repair-replace',
           },
           {
-            title: 'Glass Tabletops',
+            title: 'Glass Tabletops & Shelves',
             link: '/residential/glass-tabletops-shelves',
           },
           {
@@ -42,7 +42,7 @@ module.exports = {
         link: '/commercial',
         children: [
           {
-            title: 'Storefront Metal & Glass Installation',
+            title: 'Storefront Metal & Glass',
             link: '/commercial/storefront-metal-and-glass',
           },
           {
