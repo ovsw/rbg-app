@@ -20,18 +20,18 @@ const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embed
             <div className="col-xs-12 col-sm-9 col-md-9 col-lg-9">
               <MainContentWrapper>
                 <div className="entry-content">
-                  {body.map(block => (
-                    <div key={block.id}>
-                      {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
-                      {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
-                      {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
+                  {body &&
+                    body.map(block => (
+                      <div key={block.id}>
+                        {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
+                        {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
+                        {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
                       {block.model.apiKey === 'video' && <VideoBlock block={block} />} */}
-                    </div>
-                  ))}
+                      </div>
+                    ))}
                 </div>
                 {embedCodes && (
                   <>
-                    <h2>Contact Us</h2>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: embedCodes,
