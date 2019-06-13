@@ -7,7 +7,7 @@ import ImageBlock from '../contentBlocks/ImageBlock'
 import Sidebar from '../Sidebar/Sidebar'
 import MapContact from '../MapContact'
 
-const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embedCodes }, map }) => {
+const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embedCodes }, map, contactForm }) => {
   const pageHeaderImage = headerImage || coverImage
 
   return (

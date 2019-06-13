@@ -1,9 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const ContactPage = ({ data }) => (
   <>
+    <Helmet>
+      <script src="https://services.cognitoforms.com/scripts/embed.js" />
+    </Helmet>
     <BasicPageTemplate data={data.datoCmsContactPage} map contactForm />
   </>
 )
