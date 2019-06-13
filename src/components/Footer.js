@@ -48,6 +48,7 @@ const Footer = props => {
               <div className="widget widget_text">
                 <h3 className="widget-title">Raben Glass</h3>
                 <p>ROC# 317531 LICENSED, BONDED AND INSURED. ALL WORK AND PRODUCTS GUARANTEED.</p>
+                <p>Showroom - by appointment only: 1826 W Broadway #25, Mesa AZ 85202</p>
                 <p className="topmargin_40">
                   <Link to="/contact" className="theme_button color1">
                     Free Quote
