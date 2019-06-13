@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import VideoBgImage from '../../images/video-bg.jpg'
 
 const About = props => (
@@ -21,20 +22,21 @@ const About = props => (
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
-          <span className="small-text big highlight">Arizona Glass</span>
+          <span className="small-text big highlight">Glass Repair &amp; Replacement Mesa AZ</span>
           <h2 className="section_header">About Raben Glass</h2>
           <hr className="divider_60_2 main_bg_color" />
           <p className="bold grey">
-            Family owned and operated, with over 40 years of experience working in the Glass Industry.
-          </p>
-          <p className="">
-            Here at Raben Glass we put you first while making sure we provide the best service we possibly can. We look
-            forward to working with you for all your glass needs ​ Raben Glass LLC is licensed, bonded and insured.
+            We are family owned and operated, with over 40 years of experience working in the Glass Industry.
           </p>
           <p>
-            <a href="#" className="theme_button color1">
+            At Raben Glass, we put YOU first while making sure we provide the best service we possibly can. We look
+            forward to working with you for all your glass repair and replacement needs. Raben Glass LLC is licensed,
+            bonded and insured.
+          </p>
+          <p>
+            <Link to="/contact" className="theme_button color1">
               Free Quote
-            </a>
+            </Link>
           </p>
         </div>
       </div>
