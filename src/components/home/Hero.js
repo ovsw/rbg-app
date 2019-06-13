@@ -59,10 +59,8 @@ const Hero = () => {
                   </HeroTitle>
                 </div>
                 <IntroText className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
-                  <p>
-                    Over 40 years of experience in the glass industry.
-                    <br /> Our work and products are guaranteed.
-                  </p>
+                  Over 40 years of experience in the glass industry.
+                  <br /> Our work and products are guaranteed.
                 </IntroText>
                 <div className="intro-layer to_animate animated fadeInUp" data-animation="fadeInUp">
                   <div className="slide_buttons">
