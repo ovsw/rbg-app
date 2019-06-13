@@ -83,7 +83,7 @@ const Footer = props => {
             </div>
             <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
               <div className="widget widget_text">
-                <h3 className="widget-title">Stay Tunned</h3>
+                <h3 className="widget-title">Stay Tuned</h3>
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
