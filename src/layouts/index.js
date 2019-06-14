@@ -36,7 +36,6 @@ class Layout extends React.Component {
 
     this.state = {
       isMenuOpen: false,
-      reviews: [],
     }
 
     this.toggleMenu = () => {
@@ -84,9 +83,7 @@ class Layout extends React.Component {
 
   render() {
     const { children, location } = this.props
-    const { isMenuOpen, reviews } = this.state
-
-    console.log(reviews)
+    const { isMenuOpen } = this.state
 
     return (
       <ThemeProvider theme={RBGTheme}>
