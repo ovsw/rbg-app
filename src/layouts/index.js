@@ -6,11 +6,9 @@
  */
 
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
-
 import styled, { ThemeProvider } from 'styled-components'
-import { push as MobileMenu } from 'react-burger-menu'
+import Favicons from '../components/Favicons'
+
 import PageTransition from '../components/pageTransitionPose'
 
 import RBGTheme from '../theme/defaultTheme'
@@ -86,26 +84,29 @@ class Layout extends React.Component {
     const { isMenuOpen } = this.state
 
     return (
-      <ThemeProvider theme={RBGTheme}>
-        <div id="outer-container">
-          <MobileNav isMenuOpen={isMenuOpen} updateMenuState={this.updateMenuState} closeMenu={this.closeMenu} />
-          <div id="page-wrap">
-            <Header toggleMenu={this.toggleMenu} />
-            <main>
-              <PageTransition location={location}>{children}</PageTransition>
-            </main>
-            <Footer />
-            <Copyright>
-              © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
-              {` `}
-              Website by{' '}
-              <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
-                OVS Websites
-              </a>
-            </Copyright>
+      <>
+        <Favicons />
+        <ThemeProvider theme={RBGTheme}>
+          <div id="outer-container">
+            <MobileNav isMenuOpen={isMenuOpen} updateMenuState={this.updateMenuState} closeMenu={this.closeMenu} />
+            <div id="page-wrap">
+              <Header toggleMenu={this.toggleMenu} />
+              <main>
+                <PageTransition location={location}>{children}</PageTransition>
+              </main>
+              <Footer />
+              <Copyright>
+                © {new Date().getFullYear()} Raben Glass LLC, all rights reserved.
+                {` `}
+                Website by{' '}
+                <a href="https://ovswebsites.com" target="_blank" rel="noopener noreferrer">
+                  OVS Websites
+                </a>
+              </Copyright>
+            </div>
           </div>
-        </div>
-      </ThemeProvider>
+        </ThemeProvider>
+      </>
     )
   }
 }
