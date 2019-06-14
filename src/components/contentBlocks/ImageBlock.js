@@ -4,13 +4,34 @@ import styled from 'styled-components'
 import media from '../responsive'
 
 const ImageWrapper = styled.div`
-  margin-top: 2rem;
+  margin: 3rem auto;
+
+  ${media.lg`padding: 0 2rem;`};
+
+  figure {
+    text-align: center;
+    figcaption {
+      margin-top: 1rem;
+    }
+  }
 `
 
 const ImageBlock = ({ block }) => (
-  <ImageWrapper className="entry-thumbnail item-media">
-    <Img fluid={block.image.fluid} alt={block.alt} />
-  </ImageWrapper>
+  <>
+    {block.image.title && (
+      <ImageWrapper className="entry-thumbnail item-media">
+        <figure>
+          <Img fluid={block.image.fluid} alt={block.alt} />
+          <figcaption>{block.image.title}</figcaption>
+        </figure>
+      </ImageWrapper>
+    )}
+    {!block.image.title && (
+      <ImageWrapper className="entry-thumbnail item-media">
+        <Img fluid={block.image.fluid} alt={block.alt} />
+      </ImageWrapper>
+    )}
+  </>
 )
 
 export default ImageBlock
