@@ -37,6 +37,7 @@ export const query = graphql`
           }
           image {
             url
+            title
             alt
             fluid(
               maxWidth: 785
