@@ -11,13 +11,14 @@ const Section = styled(BackgroundImage)`
   background-attachment: fixed;
 `
 const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   ${tw`absolute pin`};
   z-index: -1;
 `
 const MainHeading = styled.h1`
   color: white !important;
   ${media.lg`${tw`py-20 px-4`}`};
+  text-shadow: 0 0 35px rgba(129, 214, 18, 0.35), 0 0 10px gray;
   /* color: white; */
 `
 const SubHeading = styled.p`
