@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const ContactPage = ({ data }) => (
   <>
-    <Helmet>
+    <HelmetDatoCms seo={data.datoCmsContactPage.seoMetaTags}>
       <script src="https://services.cognitoforms.com/scripts/embed.js" />
-    </Helmet>
+    </HelmetDatoCms>
     <BasicPageTemplate data={data.datoCmsContactPage} map contactForm />
   </>
 )
@@ -19,6 +19,9 @@ export const query = graphql`
   query ContactPageQuery {
     datoCmsContactPage {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt

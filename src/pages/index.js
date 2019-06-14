@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Image from '../components/image'
-import SEO from '../components/seo'
 
 import Hero from '../components/home/Hero'
 import CTASection from '../components/CTASection'
@@ -15,7 +15,7 @@ import Testimonials from '../components/home/Testimonials'
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <HelmetDatoCms seo={data.datoCmsHome.seoMetaTags} />
     <Hero />
     <CTASection />
     <Features />
@@ -39,6 +39,11 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
+    datoCmsHome {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+    }
     allDatoCmsServiceResidential(sort: { fields: [position], order: ASC }) {
       edges {
         node {

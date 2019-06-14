@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import BasicPagetemplate from '../components/Templates/BasicPageTemplate'
-
-import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    {/* <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} /> */}
+    <HelmetDatoCms seo={data.datoCmsNewsArticle.seoMetaTags} />
     <BasicPagetemplate data={data.datoCmsNewsArticle} />
   </>
 )
@@ -17,6 +17,9 @@ export const query = graphql`
   query NewsArticleQuery($slug: String!) {
     datoCmsNewsArticle(slug: { eq: $slug }) {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       coverImage {
         url
         alt

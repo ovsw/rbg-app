@@ -1,9 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const ServiceAutoPage = ({ data }) => (
   <>
+    <HelmetDatoCms seo={data.datoCmsServicesAuto.seoMetaTags} />
+
     <BasicPageTemplate data={data.datoCmsServicesAuto} />
   </>
 )
@@ -14,6 +17,9 @@ export const query = graphql`
   query ServiceAutoQuery {
     datoCmsServicesAuto {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt

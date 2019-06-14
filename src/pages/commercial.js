@@ -1,9 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import FullWidthPageTemplate from '../components/Templates/FullWidthPageTemplate'
 
 const ServicesCommercialPage = ({ data }) => (
   <>
+    <HelmetDatoCms seo={data.datoCmsServicesCommercial.seoMetaTags} />
     <FullWidthPageTemplate
       pageData={data.datoCmsServicesCommercial}
       servicesData={data.allDatoCmsServiceCommercial.edges}
@@ -18,6 +20,9 @@ export const query = graphql`
   query ServicesCommercialQuery {
     datoCmsServicesCommercial {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt

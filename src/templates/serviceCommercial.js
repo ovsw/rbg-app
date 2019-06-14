@@ -1,9 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
-const CommercialServicePage = ({ data }) => <BasicPageTemplate data={data.datoCmsServiceCommercial} />
+const CommercialServicePage = ({ data }) => (
+  <>
+    <HelmetDatoCms seo={data.datoCmsServiceCommercial.seoMetaTags} />
+    <BasicPageTemplate data={data.datoCmsServiceCommercial} />
+  </>
+)
 
 export default CommercialServicePage
 
@@ -12,6 +18,9 @@ export const query = graphql`
     datoCmsServiceCommercial(slug: { eq: $slug }) {
       title
       tagline
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt

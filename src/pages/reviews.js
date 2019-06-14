@@ -1,19 +1,19 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import { graphql } from 'gatsby'
 import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const ReviewsPage = ({ data }) => (
   <>
-    <Helmet>
+    <HelmetDatoCms seo={data.datoCmsReviewsPage.seoMetaTags}>
       <script id="EmbedSocialReviewsScript" src="https://embedsocial.com/embedscript/ri.js" />
       <link
         id="EmbedSocialIFrameLightboxCSS"
         rel="stylesheet"
         href="https://embedsocial.com/cdn/iframe-lightbox.min.css"
       />
-    </Helmet>
+    </HelmetDatoCms>
     <BasicPageTemplate data={data.datoCmsReviewsPage} />
   </>
 )
@@ -24,6 +24,9 @@ export const query = graphql`
   query ReviewsPageQuery {
     datoCmsReviewsPage {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt

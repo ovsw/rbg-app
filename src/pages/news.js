@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import PageHeading from '../components/PageHeading'
 import MainContentWrapper from '../components/common/MainContentWrapper'
 import Sidebar from '../components/Sidebar/Sidebar'
@@ -15,11 +16,13 @@ const ImageLink = styled(Link)`
 
 const NewsListingPage = ({
   data: {
-    datoCmsNewsLanding: { title, tagline, headerImage },
+    datoCmsNewsLanding: { title, seoMetaTags, tagline, headerImage },
     allDatoCmsNewsArticle: { edges },
   },
 }) => (
   <>
+    <HelmetDatoCms seo={seoMetaTags} />
+
     <PageHeading title={title} image={headerImage} />
 
     <section className="ls section_padding_top_100 section_padding_bottom_100">
@@ -34,7 +37,7 @@ const NewsListingPage = ({
                       <div className="col-md-5">
                         <div className="item-media entry-thumbnail">
                           <ImageLink to={`/news/${slug}`}>
-                            <NewsImage fluid={coverImage.fluid} alt={coverImage.alt} alt="" />
+                            <NewsImage fluid={coverImage.fluid} alt={coverImage.alt} />
                           </ImageLink>
                         </div>
                       </div>
@@ -94,6 +97,9 @@ export const query = graphql`
   query NewsListingPageQuery {
     datoCmsNewsLanding {
       title
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
       headerImage {
         url
         alt
