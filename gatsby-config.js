@@ -59,7 +59,7 @@ module.exports = {
           },
           {
             title: 'Multi-Slide Glass Doors & Partitions',
-            link: '/commercial/multi-slide-doors-partitions',
+            link: '/commercial/multi-slide-glass-doors-partitions',
           },
           {
             title: 'Closers & Hardware Replacement',
