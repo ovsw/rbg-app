@@ -3,8 +3,9 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Raben Glass`,
-    description: `SEO description here.`,
-    author: `@ovsw`,
+    siteUrl: `https://www.rabenglass.com`,
+    description: `We repair and replace windows, doors and more in homes and businesses. Licensed, bonded, insured - we guarantee our work and materials. `,
+    author: `OVS Websites - ovi@ovswebsites.com`,
     siteNav: [
       {
         title: 'Home',
@@ -111,9 +112,18 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://rbg-app.netlify.com',
-        sitemap: 'https://rbg-app.netlify.com/sitemap.xml',
-        policy: [{ userAgent: '*', disallow: '/' }],
+        host: 'https://www.rabenglass.com',
+        sitemap: 'https://www.rabenglass.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        // output: `/some-other-sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        exclude: [`/reviews`, `/news`, `/contact`, `/guarantee`],
       },
     },
     {
