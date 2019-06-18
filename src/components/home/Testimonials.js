@@ -79,6 +79,7 @@ const Testimonials = ({ slides }) => {
                     </div>
                     <div className="media-right media-middle item-meta">
                       <h4 className="margin_0">{node.authorName}</h4>
+                      <p>{node.date}</p>
                       <span className="star-rating" title="Rated 5.0 out of 5">
                         <span>
                           <strong className="rating">5.0</strong> out of 5

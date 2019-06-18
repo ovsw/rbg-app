@@ -17,6 +17,7 @@ const IndexPage = ({ data }) => (
   <>
     <HelmetDatoCms seo={data.datoCmsHome.seoMetaTags} />
     <Hero />
+    {console.log(process.env.NODE_ENV)}
     <CTASection />
     <Features />
     <Services theme="ls" title="Services" subtitle="Residential" services={data.allDatoCmsServiceResidential.edges} />
@@ -100,6 +101,7 @@ export const query = graphql`
       edges {
         node {
           authorName
+          date
           text
         }
       }
