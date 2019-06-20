@@ -37,6 +37,15 @@ export const query = graphql`
           ...GatsbyDatoCmsFluid
         }
       }
+      body {
+        ... on DatoCmsTextBlock {
+          id
+          model {
+            apiKey
+          }
+          content
+        }
+      }
       embedCodes
     }
   }
