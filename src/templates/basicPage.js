@@ -6,7 +6,9 @@ import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 
 const BasicPage = ({ data }) => (
   <>
-    <HelmetDatoCms seo={data.datoCmsBasicPage.seoMetaTags} />
+    <HelmetDatoCms seo={data.datoCmsBasicPage.seoMetaTags}>
+      <meta name="robots" content="noindex, nofollow" />
+    </HelmetDatoCms>
     <BasicPageTemplate data={data.datoCmsBasicPage} />
   </>
 )

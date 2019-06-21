@@ -8,6 +8,8 @@ import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 const NotFoundPage = ({ data }) => (
   <>
     <HelmetDatoCms seo={data.datoCmsBasicPage.seoMetaTags}>
+      <meta name="robots" content="noindex, nofollow" />
+
       <script src="https://services.cognitoforms.com/scripts/embed.js" />
     </HelmetDatoCms>
     <BasicPageTemplate data={data.datoCmsBasicPage} />

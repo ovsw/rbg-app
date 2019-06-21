@@ -7,6 +7,7 @@ import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 const ReviewsPage = ({ data }) => (
   <>
     <HelmetDatoCms seo={data.datoCmsReviewsPage.seoMetaTags}>
+      <meta name="robots" content="noindex, nofollow" />
       <script id="EmbedSocialReviewsScript" src="https://embedsocial.com/embedscript/ri.js" />
       <link
         id="EmbedSocialIFrameLightboxCSS"

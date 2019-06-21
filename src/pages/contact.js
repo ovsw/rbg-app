@@ -7,6 +7,7 @@ import BasicPageTemplate from '../components/Templates/BasicPageTemplate'
 const ContactPage = ({ data }) => (
   <>
     <HelmetDatoCms seo={data.datoCmsContactPage.seoMetaTags}>
+      <meta name="robots" content="noindex, nofollow" />
       <script src="https://services.cognitoforms.com/scripts/embed.js" />
     </HelmetDatoCms>
     <BasicPageTemplate data={data.datoCmsContactPage} map contactForm />

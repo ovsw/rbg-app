@@ -21,7 +21,9 @@ const NewsListingPage = ({
   },
 }) => (
   <>
-    <HelmetDatoCms seo={seoMetaTags} />
+    <HelmetDatoCms seo={seoMetaTags}>
+      <meta name="robots" content="noindex, nofollow" />
+    </HelmetDatoCms>
 
     <PageHeading title={title} image={headerImage} />
 
