@@ -95,8 +95,10 @@ const Sidebar = () => {
       <div className="widget">
         <Link to="/our-guarantee">
           <BadgeImage fluid={data.guaranteeBadgeImg.childImageSharp.fluid} alt="100% Guarantee Badge" />
-          <BadgeImage fluid={data.homeAdvisorBadgeImg.childImageSharp.fluid} alt="Home Advisor Top Rated Badge" />
         </Link>
+        <a href="https://www.homeadvisor.com/rated.RabenGlassLLC.70568813.html" rel="noopener noreferrer">
+          <BadgeImage fluid={data.homeAdvisorBadgeImg.childImageSharp.fluid} alt="Home Advisor Top Rated Badge" />
+        </a>
       </div>
       <Services />
       <RecentPosts />
