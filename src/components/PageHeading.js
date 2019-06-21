@@ -1,39 +1,42 @@
 import React from 'react'
-import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import media from './responsive'
 import CTASection from './CTASection'
 
-const Section = styled(BackgroundImage)`
+const Section = styled.div`
   ${tw`relative pt-32`};
   padding-top: 13rem;
   padding-bottom: 5rem;
+  ${media.lg`min-height:500px;`};
   background-attachment: fixed;
+  background-color: white;
+  background-size: 1000px;
+  ${media.lg`background-size: 1920px`};
+  background-position: top center;
 `
 const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   ${tw`absolute pin`};
-  z-index: -1;
+  z-index: 10;
 `
+const TextWrapper = styled.div`
+  ${tw`absolute pin pt-20 flex items-center justify-center`};
+`
+
 const MainHeading = styled.h1`
   color: white !important;
-  ${media.lg`${tw`py-20 px-4`}`};
+  ${tw`relative text-4xl`};
+  z-index: 11;
+  ${media.lg`${tw`py-20 px-4 text-5xl`}`};
   text-shadow: 0 0 35px rgba(129, 214, 18, 0.35), 0 0 10px gray;
   /* color: white; */
-`
-const SubHeading = styled.p`
-  span {
-    background-color: ${props => props.theme.accentColor};
-
-    color: black;
-  }
 `
 
 const PageHeader = ({ title, image }) => (
   <>
-    <Section fluid={image.fluid} backgroundColor="#000000" className="">
+    <Section style={{ backgroundImage: `url(${image.url})` }}>
       <Overlay />
-      <div className="container">
+      <TextWrapper className="container">
         <div className="row">
           <div className="col-sm-12 text-center">
             <MainHeading>{title}</MainHeading>
@@ -42,7 +45,7 @@ const PageHeader = ({ title, image }) => (
             </SubHeading> */}
           </div>
         </div>
-      </div>
+      </TextWrapper>
     </Section>
     <CTASection />
   </>
