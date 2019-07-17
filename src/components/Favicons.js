@@ -7,17 +7,7 @@ const Favicons = () => {
     query FaviconQuery {
       datoCmsSite {
         faviconMetaTags {
-          tags {
-            tagName
-            attributes {
-              rel
-              sizes
-              href
-              name
-              content
-              type
-            }
-          }
+          tags
         }
       }
     }
