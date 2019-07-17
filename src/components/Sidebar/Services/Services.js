@@ -11,6 +11,13 @@ const List = styled.ul`
     ${tw`font-bold`};
   }
 `
+const SubList = styled.li`
+  margin-bottom: 1.25rem;
+`
+const SubHeading = styled.h4`
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+`
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -35,18 +42,25 @@ const Services = () => {
       <h3 className="widget-title">Our Services</h3>
       <hr className="divider_60_2 main_bg_color" />
       <List>
-        <li>
-          <Link to="/residential">Residential</Link>
+        <SubList>
+          <SubHeading>
+            <Link to="/residential">Residential</Link>
+          </SubHeading>
           <SubItemListing items={data.site.siteMetadata.siteNav[1].children} />
-        </li>
-        <li>
-          <Link to="/commercial">Commercial</Link>
+        </SubList>
+        <SubList>
+          <SubHeading>
+            <Link to="/commercial">Commercial</Link>
+          </SubHeading>
           <SubItemListing items={data.site.siteMetadata.siteNav[2].children} />
-        </li>
-        <li>
-          <Link to="/auto">Auto</Link>
+        </SubList>
+        <SubList>
+          <SubHeading>
+            <Link to="/auto">Auto</Link>
+          </SubHeading>
+
           <SubItemListing items={[{ title: 'Windshield Glass Replacement & Repair', link: '/auto' }]} />
-        </li>
+        </SubList>
       </List>
     </div>
   )
