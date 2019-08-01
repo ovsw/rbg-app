@@ -13,6 +13,8 @@ const Section = styled.div`
   background-size: 1000px;
   ${media.lg`background-size: 1920px`};
   background-position: top center;
+  background-image: url('${props => props.imageSource}?fit=crop&h=400&max-w=800&auto=compress,enhance');
+  ${media.lg`background-image: url('${props => props.imageSource}?fit=crop&h=800&max-w=1600&auto=compress,enhance');`};
 `
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
@@ -31,18 +33,19 @@ const MainHeading = styled.h1`
   text-shadow: 0 0 35px rgba(129, 214, 18, 0.35), 0 0 10px gray;
   /* color: white; */
 `
+const ImageContainer = styled.div``
 
 const PageHeader = ({ title, image }) => (
   <>
-    <Section style={{ backgroundImage: `url(${image.url})` }}>
+    <Section imageSource={image.url}>
       <Overlay />
       <TextWrapper className="container">
         <div className="row">
           <div className="col-sm-12 text-center">
             <MainHeading>{title}</MainHeading>
             {/* <SubHeading>
-              <span>frame fix / adjustment, glass replacement, hardware replacement</span>
-            </SubHeading> */}
+      <span>frame fix / adjustment, glass replacement, hardware replacement</span>
+    </SubHeading> */}
           </div>
         </div>
       </TextWrapper>
