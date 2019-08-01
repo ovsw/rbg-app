@@ -14,7 +14,7 @@ const Section = styled.div`
   ${media.lg`background-size: 1920px`};
   background-position: top center;
   background-image: url('${props => props.imageSource}?fit=crop&h=400&max-w=800&auto=compress,enhance');
-  ${media.lg`background-image: url('${props => props.imageSource}?fit=crop&h=800&max-w=1600&auto=compress,enhance');`};
+  ${media.lg`background-image: url('${props => props.imageSource}?fit=crop&h=1000&max-w=1600&auto=compress,enhance');`};
 `
 const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
