@@ -10,14 +10,14 @@ class Transition extends React.PureComponent {
     const RoutesContainer = posed.div({
       enter: {
         opacity: 1,
-        filter: 'blur(0px)',
+        filter: 'brightness(100%)',
         y: 0,
         delay: timeout,
         delayChildren: timeout,
       },
       exit: {
         opacity: 0,
-        filter: 'blur(20px)',
+        filter: 'brightness(100%)',
         y: -30,
       },
     })
