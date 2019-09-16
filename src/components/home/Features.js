@@ -86,7 +86,7 @@ const Features = props => {
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12">
             <Column
-              to="/auto"
+              to="/auto-glass"
               className="teaser media media-xxs-block inline-block ds main_color2 with_padding big_padding margin_0"
             >
               <div className="media-left media-middle">
