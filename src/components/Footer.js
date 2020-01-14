@@ -82,6 +82,12 @@ const Footer = props => {
                     <a href="mailto:info@rabenglass.com">info@rabenglass.com</a>
                   </li>
                 </ul>
+                <h3 className="widget-title">ADA</h3>
+                <ul className="list1">
+                  <li>
+                    <Link to="/ada-compliance/">ADA Compliance</Link>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-md-3 col-sm-6 to_animate animated fadeInUp">
