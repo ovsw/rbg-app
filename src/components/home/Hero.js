@@ -31,8 +31,8 @@ const Hero = () => {
     query {
       slide1: file(relativePath: { eq: "hero.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, duotone: { highlight: "#ffffff", shadow: "#051020", opacity: 50 }) {
-            ...GatsbyImageSharpFluid_noBase64
+          fluid(maxWidth: 1200, duotone: { highlight: "#ffffff", shadow: "#051020", opacity: 50 }) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
