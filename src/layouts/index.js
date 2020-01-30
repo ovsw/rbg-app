@@ -5,8 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Favicons from '../components/Favicons'
 
 import PageTransition from '../components/pageTransitionPose'
@@ -17,6 +18,15 @@ import MobileNav from '../components/Header/MobileNav'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer'
 import './layout.css'
+
+import {
+  websiteSchema,
+  localBusinessSchema,
+  // professionalServiceSchema,
+  // breadCrumbsList,
+  // organizationSchema,
+  // reviewSchema,
+} from '../components/schemas'
 
 const Copyright = styled.div`
   ${tw`p-4 text-center text-sm`};
@@ -85,6 +95,10 @@ class Layout extends React.Component {
 
     return (
       <>
+        <HelmetDatoCms>
+          <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
+          <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+        </HelmetDatoCms>
         <Favicons />
         <ThemeProvider theme={RBGTheme}>
           <div id="outer-container">
