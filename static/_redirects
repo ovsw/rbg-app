@@ -1,3 +1,5 @@
 https://rbg-app.netlify.com/* https://www.rabenglass.com/:splat 301!
+https://rbg-app.netlify.app/* https://www.rabenglass.com/:splat 301!
+
 http://rabenglass.com/* https://www.rabenglass.com/:splat 301!
 https://rabenglass.com/* https://www.rabenglass.com/:splat 301!
