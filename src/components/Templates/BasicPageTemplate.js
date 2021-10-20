@@ -4,6 +4,7 @@ import PageHeading from '../PageHeading'
 import MainContentWrapper from '../common/MainContentWrapper'
 import TextBlock from '../contentBlocks/TextBlock'
 import ImageBlock from '../contentBlocks/ImageBlock'
+import VideoBlock from '../contentBlocks/VideoBlock'
 import Sidebar from '../Sidebar/Sidebar'
 import MapContact from '../MapContact'
 
@@ -25,8 +26,8 @@ const BasicPageTemplate = ({ data: { title, body, headerImage, coverImage, embed
                       <div key={block.id}>
                         {block.model.apiKey === 'text_block' && <TextBlock block={block} />}
                         {block.model.apiKey === 'image_block' && <ImageBlock block={block} />}
-                        {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
-                      {block.model.apiKey === 'video' && <VideoBlock block={block} />} */}
+                        {/* {block.model.apiKey === 'quote' && <QuoteBlock block={block} />} */}
+                        {block.model.apiKey === 'youtube_video' && <VideoBlock block={block} />}
                       </div>
                     ))}
                 </div>

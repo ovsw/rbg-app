@@ -56,6 +56,13 @@ export const query = graphql`
             }
           }
         }
+        ... on DatoCmsYoutubeVideo {
+          id
+          model {
+            apiKey
+          }
+          youtubeVideoPageUrl
+        }
       }
     }
   }
