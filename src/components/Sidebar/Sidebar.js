@@ -64,7 +64,7 @@ const Sidebar = () => {
         <SocialWrapper>
           <a
             className="social-icon border-icon rounded-icon socicon-facebook"
-            href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
+            href="https://www.facebook.com/rabenglassaz"
             title="Facebook"
             target="_blank"
             rel="noopener noreferrer"

@@ -21,7 +21,7 @@ const Header = ({ siteTitle, toggleMenu }) => (
           <div className="col-sm-4 text-center text-sm-right greylinks hidden-xs">
             <span className="rightpadding_10">Follow Us:</span>
             <a
-              href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
+              href="https://www.facebook.com/rabenglassaz"
               title="Facebook"
               style={{ marginLeft: '0.51rem' }}
               target="_blank"
