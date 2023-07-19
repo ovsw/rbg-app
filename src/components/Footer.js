@@ -96,7 +96,7 @@ const Footer = props => {
                 <div className="media small-media">
                   <div className="media-left media-middle">
                     <a
-                      href="https://www.facebook.com/pg/Raben-Glass-Mesa-AZ-836410503382316"
+                      href="https://www.facebook.com/rabenglassaz"
                       className="social-icon color-icon border-icon rounded-icon socicon-facebook"
                       target="_blank"
                       rel="noopener noreferrer"
