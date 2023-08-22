@@ -79,7 +79,7 @@ const Footer = props => {
                   </li>
                   <li>
                     <i className="rt-icon2-mail2 highlight" />
-                    <a href="mailto:rabenglassllc@gmail.com">rabenglassllc@gmail.com</a>
+                    <a href="mailto:info@rabenglass.com">info@rabenglass.com</a>
                   </li>
                 </ul>
                 <h3 className="widget-title">ADA</h3>
