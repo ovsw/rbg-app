@@ -56,6 +56,9 @@
     "eslint-plugin-react": "^7.18.0",
     "prettier": "^1.19.1"
   },
+  "overrides": {
+    "axios": "1.16.1"
+  },
   "keywords": [
     "gatsby"
   ],
